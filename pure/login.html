@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Login | GikanUma Editorial Agriculture</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700;800&amp;family=Public+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#2b160f",
+                        "on-background": "#1a1c19",
+                        "inverse-surface": "#2e312e",
+                        "background": "#f9faf5",
+                        "surface-tint": "#4f6610",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#d9dad6",
+                        "secondary": "#75584d",
+                        "tertiary": "#745300",
+                        "secondary-container": "#fed7ca",
+                        "outline": "#757969",
+                        "surface-container": "#edeee9",
+                        "primary-container": "#617a24",
+                        "tertiary-fixed": "#ffdea5",
+                        "primary-fixed-dim": "#b4d171",
+                        "outline-variant": "#c5c8b6",
+                        "surface-container-highest": "#e2e3de",
+                        "on-primary-fixed-variant": "#394d00",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed-variant": "#5d4200",
+                        "on-primary-fixed": "#151f00",
+                        "on-error": "#ffffff",
+                        "tertiary-container": "#936a00",
+                        "surface-variant": "#e2e3de",
+                        "primary-fixed": "#d0ee8a",
+                        "on-surface": "#1a1c19",
+                        "on-primary-container": "#edffbd",
+                        "secondary-fixed": "#ffdbce",
+                        "inverse-on-surface": "#f0f1ec",
+                        "tertiary-fixed-dim": "#f3be55",
+                        "surface-container-low": "#f3f4ef",
+                        "on-tertiary-fixed": "#261900",
+                        "on-secondary-fixed-variant": "#5b4137",
+                        "on-secondary-container": "#795c51",
+                        "on-surface-variant": "#45483a",
+                        "surface": "#f9faf5",
+                        "on-primary": "#ffffff",
+                        "primary": "#49610a",
+                        "surface-bright": "#f9faf5",
+                        "surface-container-high": "#e7e9e4",
+                        "inverse-primary": "#b4d171",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#e4beb2",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#fff5eb",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "display": ["Manrope"],
+                        "body": ["Public Sans"],
+                        "label": ["Public Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .glass-nav {
+            background: rgba(249, 250, 245, 0.8);
+            backdrop-filter: blur(16px);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-background font-body min-h-screen flex flex-col">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-[#f9faf5]/80 dark:bg-[#1a1c19]/80 backdrop-blur-md shadow-sm shadow-[#1a1c19]/5">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-2xl font-bold tracking-tighter text-[#49610a] dark:text-[#d1e892] brand-font">
+                GikanUma
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="font-headline text-sm tracking-tight text-[#45483a] font-medium hover:text-[#617a24] transition-colors duration-300 py-1"
+                    href="./home.html">Home</a>
+                <a class="font-headline text-sm tracking-tight text-[#45483a] font-medium hover:text-[#617a24] transition-colors duration-300 py-1"
+                    href="./about.html">About Us</a>
+                <a class="font-headline text-sm tracking-tight text-[#49610a] font-extrabold border-b-2 border-[#49610a] py-1"
+                    href="./support.html">Support</a>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="hidden lg:flex items-center bg-surface-container-high px-4 py-1.5 rounded-full">
+                    <span class="material-symbols-outlined text-on-surface-variant text-lg">search</span>
+                    <input class="bg-transparent border-none focus:ring-0 text-sm font-body w-48"
+                        placeholder="Search topics..." type="text" />
+                </div>
+                <div class="flex items-center gap-4 text-[#49610a] dark:text-[#d1e892]">
+                    <span
+                        class="material-symbols-outlined cursor-pointer scale-95 active:scale-90 transition-transform"><a
+                            href="./cart.html">shopping_cart</a></span>
+                    <span
+                        class="material-symbols-outlined cursor-pointer scale-95 active:scale-90 transition-transform"><a
+                            href="./account.html">account_circle</a></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content: Split Screen Layout -->
+    <main class="flex-grow flex pt-16 h-screen">
+        <!-- Left Side: Visual Narrative -->
+        <section class="hidden lg:flex flex-1 relative items-center justify-center overflow-hidden">
+            <img alt="Sun-drenched field" class="absolute inset-0 w-full h-full object-cover"
+                data-alt="A cinematic, high-angle view of a vast, rolling organic farm field at golden hour. The sunlight filters through heavy, warm-toned atmosphere, highlighting the rich textures of lush green crops and tilled soil. The image evokes a sense of editorial prestige and professional agriculture. Soft bokeh and a warm, natural color palette align with a high-end farm-to-table aesthetic."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGhfdtxaTqNiqyqL_S0mIiAa8Z_hYdU50ar2d0dvelcB-iGNeavrTsco8cSBpjuCvkyq2pkATZk7KvK3i9u14SjMlLIlDKKl0fIKwfeByHpsqg_LSKJ4fyNzQncsJfoUlC0lvpDp0QeMgWHJHPPZhylzhohzzf1Y8Y38xqFw_a5CDIn8Huzy8UlF514LrPcCPMvCYUVqeLHDQAjBbd5WRJ4QmvFjhjmbI-5tUnh9r6cvtaDfPmZRc26EKvDy-YkOf0hzatzXWdLpTk" />
+            <div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+            <div class="relative z-10 p-16 max-w-2xl text-white">
+                <h1 class="font-headline text-6xl font-extrabold tracking-tighter mb-6 leading-none">The Digital Harvest
+                </h1>
+                <p class="font-body text-xl font-light leading-relaxed opacity-90">
+                    Welcome to the nexus of heritage farming and modern editorial precision. Connect with the source of
+                    your sustenance and witness the growth of sustainable agriculture.
+                </p>
+            </div>
+        </section>
+        <!-- Right Side: Login Form -->
+        <section class="flex-1 flex items-center justify-center p-8 bg-surface-container-lowest">
+            <div class="w-full max-w-md space-y-12">
+                <header class="text-center lg:text-left">
+                    <h2 class="font-headline text-4xl font-bold text-on-background tracking-tight mb-2">Welcome Back
+                    </h2>
+                    <p class="text-on-surface-variant font-body">Continue your editorial journey with GikanUma.</p>
+                </header>
+                <form class="space-y-8">
+                    <div class="space-y-6">
+                        <!-- Email Input -->
+                        <div class="group relative">
+                            <label
+                                class="block text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-2 font-label"
+                                for="email">Email Address</label>
+                            <div class="relative">
+                                <input
+                                    class="w-full bg-surface-container-high border-none rounded-lg px-4 py-4 text-on-background focus:ring-0 peer transition-all duration-300"
+                                    id="email" name="email" placeholder="your@email.com" required="" type="email" />
+                                <div
+                                    class="absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-300 peer-focus:w-full">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Password Input -->
+                        <div class="group relative">
+                            <label
+                                class="block text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-2 font-label"
+                                for="password">Password</label>
+                            <div class="relative">
+                                <input
+                                    class="w-full bg-surface-container-high border-none rounded-lg px-4 py-4 text-on-background focus:ring-0 peer transition-all duration-300"
+                                    id="password" name="password" placeholder="••••••••" required="" type="password" />
+                                <div
+                                    class="absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-300 peer-focus:w-full">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between font-label text-sm">
+                        <label
+                            class="flex items-center gap-3 cursor-pointer text-on-surface-variant hover:text-primary transition-colors">
+                            <input
+                                class="w-5 h-5 rounded border-outline-variant text-primary focus:ring-primary/20 bg-surface-container-high"
+                                type="checkbox" />
+                            <span>Remember me</span>
+                        </label>
+                        <a class="text-tertiary font-semibold hover:underline underline-offset-4" href="#">Forgot
+                            Password?</a>
+                    </div>
+                    <button
+                        class="w-full bg-primary text-on-primary font-headline font-bold py-5 rounded-full transition-all duration-300 hover:bg-primary-container hover:shadow-lg hover:-translate-y-1 active:scale-95"
+                        type="submit">
+                        Sign In to the Harvest
+                    </button>
+                </form>
+                <footer class="text-center pt-8 border-t border-surface-container">
+                    <p class="font-body text-on-surface-variant">
+                        Don't have an account?
+                        <a class="text-primary font-bold hover:underline underline-offset-4 ml-1"
+                            href="./registration.html">Sign Up</a>
+                    </p>
+                </footer>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full mt-auto bg-[#f3f4ef] dark:bg-[#1a1c19] text-[#49610a] dark:text-[#d1e892]">
+        <div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8">
+            <div class="font-headline font-black text-2xl">GikanUma</div>
+            <div class="flex flex-wrap justify-center gap-8 font-label text-xs uppercase tracking-widest">
+                <a class="text-on-surface-variant hover:underline decoration-primary underline-offset-4 transition-opacity opacity-80 hover:opacity-100"
+                    href="#">Terms of Service</a>
+                <a class="text-on-surface-variant hover:underline decoration-primary underline-offset-4 transition-opacity opacity-80 hover:opacity-100"
+                    href="#">Privacy Policy</a>
+                <a class="text-on-surface-variant hover:underline decoration-primary underline-offset-4 transition-opacity opacity-80 hover:opacity-100"
+                    href="#">Sustainability Report</a>
+                <a class="text-on-surface-variant hover:underline decoration-primary underline-offset-4 transition-opacity opacity-80 hover:opacity-100"
+                    href="#">Farmer Login</a>
+            </div>
+            <div class="text-[10px] font-label uppercase tracking-[0.2em] opacity-60 text-center md:text-right">
+                © 2024 GikanUma Editorial Agriculture. The Digital Harvest.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

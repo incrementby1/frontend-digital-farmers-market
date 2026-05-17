@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>About Us | GikanUma Editorial Agriculture</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Public+Sans:wght@300;400;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "on-secondary": "#ffffff",
+            "surface-container": "#edeee9",
+            "primary": "#49610a",
+            "tertiary-fixed-dim": "#f3be55",
+            "primary-fixed-dim": "#b4d171",
+            "on-tertiary": "#ffffff",
+            "on-surface": "#1a1c19",
+            "inverse-on-surface": "#f0f1ec",
+            "secondary": "#75584d",
+            "surface": "#f9faf5",
+            "on-secondary-fixed": "#2b160f",
+            "background": "#f9faf5",
+            "surface-container-lowest": "#ffffff",
+            "outline-variant": "#c5c8b6",
+            "outline": "#757969",
+            "surface-variant": "#e2e3de",
+            "on-error": "#ffffff",
+            "surface-tint": "#4f6610",
+            "secondary-fixed-dim": "#e4beb2",
+            "on-primary-container": "#edffbd",
+            "error-container": "#ffdad6",
+            "on-tertiary-fixed": "#261900",
+            "secondary-fixed": "#ffdbce",
+            "on-primary": "#ffffff",
+            "surface-container-highest": "#e2e3de",
+            "surface-container-low": "#f3f4ef",
+            "on-tertiary-container": "#fff5eb",
+            "on-secondary-fixed-variant": "#5b4137",
+            "inverse-primary": "#b4d171",
+            "tertiary-container": "#936a00",
+            "tertiary": "#745300",
+            "primary-fixed": "#d0ee8a",
+            "tertiary-fixed": "#ffdea5",
+            "on-primary-fixed-variant": "#394d00",
+            "on-surface-variant": "#45483a",
+            "secondary-container": "#fed7ca",
+            "on-error-container": "#93000a",
+            "error": "#ba1a1a",
+            "surface-bright": "#f9faf5",
+            "inverse-surface": "#2e312e",
+            "on-tertiary-fixed-variant": "#5d4200",
+            "surface-container-high": "#e7e9e4",
+            "on-primary-fixed": "#151f00",
+            "on-secondary-container": "#795c51",
+            "primary-container": "#617a24",
+            "on-background": "#1a1c19",
+            "surface-dim": "#d9dad6"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Public Sans"],
+            "label": ["Public Sans"]
+          },
+          borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        },
+      },
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    body {
+      font-family: 'Public Sans', sans-serif;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .glass-nav {
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+  </style>
+</head>
+
+<body class="bg-background text-on-surface">
+  <!-- TopNavBar -->
+  <nav
+    class="fixed top-0 w-full z-50 bg-[#f9faf5]/80 dark:bg-[#1a1c19]/80 backdrop-blur-md shadow-sm shadow-[#1a1c19]/5">
+    <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+      <div class="text-2xl font-bold tracking-tighter text-[#49610a] dark:text-[#d1e892] font-manrope">
+        GikanUma
+      </div>
+      <div class="hidden md:flex items-center gap-8">
+        <a class="text-[#45483a] dark:text-[#c5c8b6] font-medium font-manrope text-sm tracking-tight hover:text-[#617a24] transition-colors duration-300"
+          href="./home.html">Home</a>
+        <a class="text-[#49610a] dark:text-[#d1e892] font-extrabold border-b-2 border-[#49610a] font-manrope text-sm tracking-tight"
+          href="#">About Us</a>
+        <a class="text-[#45483a] dark:text-[#c5c8b6] font-medium font-manrope text-sm tracking-tight hover:text-[#617a24] transition-colors duration-300"
+          href="./support.html">Support</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <button class="material-symbols-outlined text-[#49610a] scale-95 active:scale-90 transition-transform"
+          data-icon="shopping_cart"><a href="./cart.html">shopping_cart</a></button>
+        <button class="material-symbols-outlined text-[#49610a] scale-95 active:scale-90 transition-transform"
+          data-icon="account_circle"><a href="./account.html">account_circle</a></button>
+      </div>
+    </div>
+  </nav>
+  <main class="pt-24">
+    <!-- Hero Section: The Digital Harvest -->
+    <section class="relative px-8 py-20 lg:py-32 overflow-hidden">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-7 z-10">
+          <span
+            class="inline-block px-4 py-1.5 mb-6 rounded-full bg-secondary-container text-on-secondary-container font-label text-xs uppercase tracking-widest font-bold">Editorial
+            Agriculture</span>
+          <h1 class="text-5xl lg:text-7xl font-extrabold text-on-surface tracking-tighter mb-8 leading-[1.1]">
+            The Digital <br /><span class="text-primary italic">Harvest</span>
+          </h1>
+          <p class="text-lg lg:text-xl text-on-surface-variant font-body leading-relaxed max-w-2xl">
+            At GikanUma, we believe that the journey from soil to soul deserves a narrative. We aren't just a
+            marketplace; we are a digital curation of the finest agricultural heritage, bridging the gap between
+            intentional farming and modern living.
+          </p>
+        </div>
+        <div class="lg:col-span-5 relative">
+          <div class="aspect-[4/5] rounded-xl overflow-hidden shadow-2xl rotate-3 bg-surface-container-high">
+            <img class="w-full h-full object-cover"
+              data-alt="Close up of dew-covered kale leaves in a sun-drenched organic field during the early morning golden hour"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN7-6Tsl14K9JY2qesDYpeFMXX7CMdEHWoaQvlClbQ4YCtgrIdhsZ8grX6Y1Glh9ZgujYBJVSASzSzJO4kVaPP2kWGRmArLTLwzPs7popRKPeVPCLZgyYWE86ICnCcy5ZEmfaaEJeZNhi7s8DYAcxx_vhP9cBoUL7CSD8hFI60yy1V-bqCgQcKQPMzYsEmAEVdoKtjT4WxsmJ5PiBdYLJSK3WNKGgWUgwi7YmkgU0C830xok-dzb1zctttg1QahUWvWL-RuGsA7lyx" />
+          </div>
+          <div
+            class="absolute -bottom-8 -left-8 w-48 h-48 rounded-lg overflow-hidden border-8 border-background shadow-xl -rotate-6 hidden lg:block">
+            <img class="w-full h-full object-cover"
+              data-alt="Hands of a farmer holding a rich, dark handful of fertile soil with small green sprouts emerging"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCss-q3msVfyyLMDhayHpHmMwJASDgLOr0xWrsARTze514CRVqpnN8sj2v92p-b549jTZYy6Jy27XR6tytjlbnBIOAkUaIjbKLCynQjJMEYgTPXwPdMKyjPPBJzWnfoepqPcttrs6BtL4CjyBli1G7sQvC1WSsfscuNIbVYS4R2rkmdbu9ELbAg2b8ganN6JrSWpG-l2dLWAk_9ynRseQqWmvsODVHLLwuyDR8YV3BsI058JSFFg69bhg8TJZp2f7-bBq05-IdJsbtU" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Our Mission: Bento Grid Style -->
+    <section class="bg-surface-container py-24 px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+          <div class="max-w-xl">
+            <h2 class="text-4xl font-bold tracking-tight text-on-surface mb-4">Our Mission</h2>
+            <p class="text-on-surface-variant font-body">Cultivating a sustainable future through transparency and
+              technological elegance.</p>
+          </div>
+          <div class="h-px bg-outline-variant flex-grow mb-4 opacity-30 mx-8 hidden md:block"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <!-- Bento Item 1 -->
+          <div
+            class="md:col-span-2 bg-surface-container-lowest p-10 rounded-xl flex flex-col justify-between min-h-[320px]">
+            <div class="material-symbols-outlined text-primary text-5xl mb-6" data-icon="eco">eco</div>
+            <div>
+              <h3 class="text-2xl font-bold mb-4">Transparent Provenance</h3>
+              <p class="text-on-surface-variant leading-relaxed">Every piece of produce tells a story. We track each
+                harvest from the specific plot of land to your doorstep, ensuring you know the hands that fed you.</p>
+            </div>
+          </div>
+          <!-- Bento Item 2 -->
+          <div class="bg-primary p-10 rounded-xl text-on-primary flex flex-col justify-center items-center text-center">
+            <div class="text-6xl font-black mb-2">100%</div>
+            <div class="font-label uppercase tracking-widest text-sm opacity-80">Organic Certified</div>
+            <p class="mt-6 font-body text-sm opacity-90 leading-relaxed">Zero synthetic pesticides. <br /> Zero
+              compromise.</p>
+          </div>
+          <!-- Bento Item 3 -->
+          <div class="bg-surface-container-high p-10 rounded-xl flex flex-col justify-between">
+            <h3 class="text-xl font-bold mb-4">Sustainable Logistics</h3>
+            <p class="text-on-surface-variant text-sm font-body">Optimizing delivery routes with AI to reduce carbon
+              emissions by 40% compared to traditional retail.</p>
+            <div class="mt-8 flex justify-end">
+              <span class="material-symbols-outlined text-tertiary" data-icon="local_shipping">local_shipping</span>
+            </div>
+          </div>
+          <!-- Bento Item 4 -->
+          <div class="md:col-span-2 relative rounded-xl overflow-hidden h-[300px]">
+            <img class="w-full h-full object-cover"
+              data-alt="Wide panoramic shot of a modern sustainable farm with solar panels integrated into green rolling hills"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFjY-wd0GSPV1SS4Q8StRyEV4YckeBPw6rbRdDKgpRsAwK5MAXvSmarIzBq9GrDcVwZPBRczUQ3KcYkoQC_LyG5AZRs1G-LPacCrCX_y5eCvcmgmIuzMV_UTMhDB7S1VLuHYgffjpDWwcJMkVpGME2-Agt_ZO_ozZlZ8g5Rwh7PAkRwQSBdf3WHFt-HpKA-Moh_AhcfEGcDLGi935hSCrnnEFKwLreOSnT13qwHLA_rlDTG_Ai1k5yc8csbW90z_AtqumAs5-0Y-I9" />
+            <div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 to-transparent flex items-end p-10">
+              <h3 class="text-white text-2xl font-bold">Future-Proof Farming</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Meet the Farmers: Editorial Profiles -->
+    <section class="py-24 px-8 bg-surface">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-20">
+          <h2 class="text-4xl font-bold text-on-surface tracking-tight mb-4">The Custodians of the Land</h2>
+          <p class="text-on-surface-variant max-w-2xl mx-auto">Our farmers are artisans. We've selected partners who
+            treat agriculture with the precision of a craft and the passion of a life's work.</p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+          <!-- Farmer 1 -->
+          <div class="flex flex-col md:flex-row gap-8 items-start">
+            <div class="w-full md:w-1/2 aspect-[3/4] rounded-lg overflow-hidden shadow-sm bg-surface-container-low">
+              <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                data-alt="Portrait of a smiling senior farmer in a sun hat standing in a vineyard with warm sunset lighting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4YfqOuKo3vjrgomgHu-i3UA5E4bm2qhfuxrHIPXMdLnL5bv1vN086F0uh2YbpAunWmQkg4IM8jNqY7tlcnsbiqNOqhF_VrDXKoz765mPynNZQfb7de2slbaSZnx1OshHXx12Ysc4Ak2UPM1_VolJeMgQWrig7ZN_eQJx8I-6nxrelTUSSYSoTvQ8roQNg195DbPmftS0Ldja8SFu9fntbhklonEPscEbLJSEf221Wi7_51ebbilHqaZucXgPUW0GAyLVZ0B1cZE7f" />
+            </div>
+            <div class="w-full md:w-1/2 pt-4">
+              <span class="text-tertiary font-bold tracking-widest text-xs uppercase">Vineyard Specialist</span>
+              <h3 class="text-3xl font-bold mt-2 mb-4">Elias Thorne</h3>
+              <p class="text-on-surface-variant font-body italic mb-6">"The earth speaks to those who listen. My family
+                has been listening to this valley for four generations."</p>
+              <div class="space-y-3">
+                <div class="flex items-center gap-3 text-sm font-label">
+                  <span class="material-symbols-outlined text-primary text-lg"
+                    data-icon="location_on">location_on</span>
+                  Upper Valley Estate
+                </div>
+                <div class="flex items-center gap-3 text-sm font-label">
+                  <span class="material-symbols-outlined text-primary text-lg" data-icon="category">category</span>
+                  Heirloom Grapes &amp; Olives
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Farmer 2 -->
+          <div class="flex flex-col md:flex-row-reverse gap-8 items-start">
+            <div class="w-full md:w-1/2 aspect-[3/4] rounded-lg overflow-hidden shadow-sm bg-surface-container-low">
+              <img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                data-alt="Portrait of a young woman farmer holding a basket of brightly colored harvested bell peppers in a greenhouse"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVUsRZ7JOg2vuYD8o1C5ccDKDH2uJ77n2JbLgrjb7j0UIyQZmMCk5qjJc6OG_BFFERIaW9WqFRDpvI6Z1Evotn8vH-h757r_8czPezNAECJJk2G0zjqnoXmAqvPQQsCslYPsXy0KsktwAnonv3Xw6FskSTZDKELZOHxEL5APzmmVCg_ljb14CqYiOK8yuoGUeDL3m3JgpLRsoHFc91jd7ubrQfllI6NXokG5LcmDTBusmTAsJ9Fqsyma2wFGE8RCRNTT2G-Ka-_1DJ" />
+            </div>
+            <div class="w-full md:w-1/2 pt-4">
+              <span class="text-tertiary font-bold tracking-widest text-xs uppercase">Regenerative Expert</span>
+              <h3 class="text-3xl font-bold mt-2 mb-4">Sarah Chen</h3>
+              <p class="text-on-surface-variant font-body italic mb-6">"Innovation isn't about replacing nature; it's
+                about magnifying its inherent brilliance."</p>
+              <div class="space-y-3">
+                <div class="flex items-center gap-3 text-sm font-label">
+                  <span class="material-symbols-outlined text-primary text-lg"
+                    data-icon="location_on">location_on</span>
+                  Neon-Leaf Gardens
+                </div>
+                <div class="flex items-center gap-3 text-sm font-label">
+                  <span class="material-symbols-outlined text-primary text-lg" data-icon="category">category</span>
+                  Hydroponic Leafy Greens
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Sustainability: The Harvest Slider (Circular Items) -->
+    <section class="py-24 bg-surface-container-low">
+      <div class="max-w-7xl mx-auto px-8">
+        <div class="mb-16">
+          <h2 class="text-4xl font-bold text-on-surface mb-4">The Cycle of Sustainability</h2>
+          <p class="text-on-surface-variant max-w-xl">How we ensure the harvest continues for generations to come.</p>
+        </div>
+        <div class="flex overflow-x-auto pb-12 gap-12 no-scrollbar snap-x">
+          <!-- Step 1 -->
+          <div class="flex-shrink-0 w-64 snap-center flex flex-col items-center text-center">
+            <div class="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
+              <img class="w-full h-full object-cover"
+                data-alt="Close-up of fresh compost being integrated into dark garden soil"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvGrjjMafloq8KV3MhMN50S8bhlOCAWbvjUUjEKRtWxzQJg9ijIEddVk-K_KUP_YCur-Fe-JjQ2xQpRo11yLfNeb3_iDHVBzgowI24uk6ZiKTApHc3BnqHBnZFABeR_oSXEJh_KvGiSI_uoOh7cKAqdSJGXwxnY5RM4ckIOdfacMM6dJxFf4L9z_R_ZoIMRMMxazNMhsyvz77aXovrqnWdFNIO9dmJ4l5fsyLQXNbzpnwRCDGTehQ0druFbyehmhxjK5Jxd5AM3KA5" />
+            </div>
+            <h4 class="font-headline font-bold text-lg mb-2">Compost-First</h4>
+            <p class="text-xs font-body text-on-surface-variant px-4">Nutrient cycling that mimics natural ecosystems
+              without chemicals.</p>
+          </div>
+          <!-- Step 2 -->
+          <div class="flex-shrink-0 w-64 snap-center flex flex-col items-center text-center">
+            <div class="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
+              <img class="w-full h-full object-cover"
+                data-alt="Sunlight filtering through the leaves of a diverse vegetable garden"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJMm4iJIcH0MA2lhTuPMoMy5tyPSfNj-afySbgKzlVHN6ozfDxGWIp8gWNyAYb6LGfkJX6Vz3Pwz00IYySJJ_4oebpPUC6VnIoljjaKqxEk_qzKAX0WMKlNOLSxk199ySkqs38sC-YAKc-4_cAWUdHshkBsywVt-sIxWIS3KIdnc9pplpqoi7DRF3NG33VeAkEY5kPYMFeOA0oB9kyJf8hxgUkA7LzVi9OeGVNDoZGLRjxqA9h_iXh4V455TndoGBah9CjLoxj8t_0" />
+            </div>
+            <h4 class="font-headline font-bold text-lg mb-2">Biodiversity</h4>
+            <p class="text-xs font-body text-on-surface-variant px-4">Planting over 50 varieties per farm to support
+              local bee populations.</p>
+          </div>
+          <!-- Step 3 -->
+          <div class="flex-shrink-0 w-64 snap-center flex flex-col items-center text-center">
+            <div class="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
+              <img class="w-full h-full object-cover"
+                data-alt="Droplets of water on a drip irrigation system pipe in a garden"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZJ8oLscvJaXA_eJjFl_nNp7Db5QqrqAL2LiZkdDnkG4GQhn_3C8_M6EVFhMYPoOXVkVM-cvfadsRYNWZ0EN5LYnBYiiaUaNyun1M6MaN52QUZPYqG9zVBwV25KWs5qZZ6naNdwhui1L2mQsjg4JSxFJ86Et6W5bGHx_CnhGwM8d4fpaRD5Sys0UOKOD0R2JpVvw5d2U66Rrzrx2vIArnXimqNVg7SyBh4yeXu61zE8sdkfaZqm_2Fjd_7wAAU5YjIwcWIAd6WpwRh" />
+            </div>
+            <h4 class="font-headline font-bold text-lg mb-2">Water Wisdom</h4>
+            <p class="text-xs font-body text-on-surface-variant px-4">Precise drip systems that use 70% less water than
+              industrial farming.</p>
+          </div>
+          <!-- Step 4 -->
+          <div class="flex-shrink-0 w-64 snap-center flex flex-col items-center text-center">
+            <div class="w-48 h-48 rounded-full overflow-hidden mb-6 border-4 border-white shadow-lg">
+              <img class="w-full h-full object-cover"
+                data-alt="Recyclable paper packaging for fresh produce on a clean wooden table"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2IYK0vmo5Lv1K9yVX_QnD9oWPVc2hU0jj7oz4LXAoI42yDY4iTKHR7730zXObOUOWVj1pB1iFKkkoW7lLJDB5Km7mHuAayklsOUPLQFNA1XShlmxEgVTw0AbwVPrrCPYXeY66xruBzIfeRd4hO5XRjxb8D0nl5hYuQU8QZXa_A8BK7bYDghRthldFfgMQJz17fsmWsNNoZgOOl11LOvP6qxybxzhqaf3M0b0caULJjQf2Oy6nGHpKXB7fEzSalbxymTmAeD-ffRDT" />
+            </div>
+            <h4 class="font-headline font-bold text-lg mb-2">Zero Plastic</h4>
+            <p class="text-xs font-body text-on-surface-variant px-4">100% compostable packaging for all our digital
+              harvest deliveries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-24 px-8">
+      <div
+        class="max-w-5xl mx-auto rounded-3xl bg-gradient-to-br from-primary to-primary-container p-12 lg:p-20 text-center relative overflow-hidden">
+        <div class="relative z-10">
+          <h2 class="text-4xl lg:text-5xl font-black text-white mb-6 tracking-tight">Experience the Harvest</h2>
+          <p class="text-on-primary-container text-lg mb-10 max-w-2xl mx-auto font-body">Join our collective of
+            discerning eaters and support the future of artisanal agriculture.</p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button
+              class="bg-surface text-primary px-10 py-4 rounded-full font-bold shadow-lg hover:bg-surface-container-highest transition-all duration-300 scale-95 active:scale-90">Browse
+              The Catalog</button>
+            <button
+              class="bg-transparent border-2 border-on-primary-container/30 text-white px-10 py-4 rounded-full font-bold hover:bg-white/10 transition-all duration-300">Join
+              the Collective</button>
+          </div>
+        </div>
+        <!-- Decorative element -->
+        <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-tertiary/20 rounded-full blur-3xl"></div>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-[#f3f4ef] dark:bg-[#1a1c19] w-full mt-auto">
+    <div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 max-w-7xl mx-auto">
+      <div class="flex flex-col items-center md:items-start gap-4">
+        <div class="font-manrope font-black text-[#49610a] text-2xl uppercase">GikanUma</div>
+        <p class="font-public-sans text-xs uppercase tracking-widest text-[#45483a]">© 2024 GikanUma Editorial
+          Agriculture. The Digital Harvest.</p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-8">
+        <a class="font-public-sans text-xs uppercase tracking-widest text-[#45483a] hover:underline decoration-[#49610a] underline-offset-4 opacity-80 hover:opacity-100 transition-all duration-300"
+          href="#">Terms of Service</a>
+        <a class="font-public-sans text-xs uppercase tracking-widest text-[#45483a] hover:underline decoration-[#49610a] underline-offset-4 opacity-80 hover:opacity-100 transition-all duration-300"
+          href="#">Privacy Policy</a>
+        <a class="font-public-sans text-xs uppercase tracking-widest text-[#45483a] hover:underline decoration-[#49610a] underline-offset-4 opacity-80 hover:opacity-100 transition-all duration-300 font-bold text-[#49610a]"
+          href="#">Sustainability Report</a>
+        <a class="font-public-sans text-xs uppercase tracking-widest text-[#45483a] hover:underline decoration-[#49610a] underline-offset-4 opacity-80 hover:opacity-100 transition-all duration-300"
+          href="#">Farmer Login</a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Account Dashboard - GikanUma</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Public+Sans:wght@100..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#edeee9",
+                        "primary": "#49610a",
+                        "tertiary-fixed-dim": "#f3be55",
+                        "primary-fixed-dim": "#b4d171",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1a1c19",
+                        "inverse-on-surface": "#f0f1ec",
+                        "secondary": "#75584d",
+                        "surface": "#f9faf5",
+                        "on-secondary-fixed": "#2b160f",
+                        "background": "#f9faf5",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c5c8b6",
+                        "outline": "#757969",
+                        "surface-variant": "#e2e3de",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#4f6610",
+                        "secondary-fixed-dim": "#e4beb2",
+                        "on-primary-container": "#edffbd",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#261900",
+                        "secondary-fixed": "#ffdbce",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e2e3de",
+                        "surface-container-low": "#f3f4ef",
+                        "on-tertiary-container": "#fff5eb",
+                        "on-secondary-fixed-variant": "#5b4137",
+                        "inverse-primary": "#b4d171",
+                        "tertiary-container": "#936a00",
+                        "tertiary": "#745300",
+                        "primary-fixed": "#d0ee8a",
+                        "tertiary-fixed": "#ffdea5",
+                        "on-primary-fixed-variant": "#394d00",
+                        "on-surface-variant": "#45483a",
+                        "secondary-container": "#fed7ca",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9faf5",
+                        "inverse-surface": "#2e312e",
+                        "on-tertiary-fixed-variant": "#5d4200",
+                        "surface-container-high": "#e7e9e4",
+                        "on-primary-fixed": "#151f00",
+                        "on-secondary-container": "#795c51",
+                        "primary-container": "#617a24",
+                        "on-background": "#1a1c19",
+                        "surface-dim": "#d9dad6"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Public Sans"],
+                        "label": ["Public Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #f9faf5;
+            color: #1a1c19;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-headline {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface flex flex-col min-h-screen">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-[#f9faf5]/80 dark:bg-[#1a1c19]/80 backdrop-blur-md shadow-sm shadow-[#1a1c19]/5">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-2xl font-bold tracking-tighter text-[#49610a] dark:text-[#d1e892] font-headline">
+                GikanUma
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="font-headline text-sm tracking-tight text-[#45483a] font-medium hover:text-[#617a24] transition-colors duration-300 py-1"
+                    href="./home.html">Home</a>
+                <a class="font-headline text-sm tracking-tight text-[#45483a] font-medium hover:text-[#617a24] transition-colors duration-300 py-1"
+                    href="./about.html">About Us</a>
+                <a class="font-headline text-sm tracking-tight text-[#45483a] font-medium hover:text-[#617a24] transition-colors duration-300 py-1"
+                    href="./support.html">Support</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="text-[#45483a] hover:text-[#49610a] transition-transform scale-95 active:scale-90">
+                    <span class="material-symbols-outlined"><a href="./cart.html">shopping_cart</a></span>
+                </button>
+                <button
+                    class="text-[#49610a] dark:text-[#d1e892] font-extrabold border-b-2 border-[#49610a] scale-95 active:scale-90 transition-transform">
+                    <a href=" ./account.html">
+                        <span class="material-symbols-outlined">account_circle</span>
+                    </a>
+                </button>
+            </div>
+        </div>
+        </div>
+    </nav>
+    <!-- Main Content Area -->
+    <main class="flex-grow pt-24 pb-16 max-w-7xl mx-auto w-full px-4 md:px-8">
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Sidebar Navigation -->
+            <aside class="w-full md:w-64 flex-shrink-0">
+                <div class="sticky top-28 space-y-2">
+                    <div class="px-4 py-6 mb-4">
+                        <h2 class="text-xs uppercase tracking-widest text-on-surface-variant font-bold mb-1">Account
+                            Menu</h2>
+                        <div class="h-1 w-8 bg-primary rounded-full"></div>
+                    </div>
+                    <nav class="space-y-1">
+                        <a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-surface-container-high text-primary font-bold transition-all duration-300 group"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl" data-icon="dashboard"
+                                style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                            <span class="text-sm">Overview</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container transition-all duration-300 group"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl" data-icon="shopping_bag">shopping_bag</span>
+                            <span class="text-sm">Recent Orders</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container transition-all duration-300 group"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl" data-icon="person">person</span>
+                            <span class="text-sm">Personal Info</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container transition-all duration-300 group"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl"
+                                data-icon="local_shipping">local_shipping</span>
+                            <span class="text-sm">Shipping Addresses</span>
+                        </a>
+                        <a class="flex items-center gap-3 px-4 py-3 rounded-xl text-on-surface-variant hover:bg-surface-container transition-all duration-300 group"
+                            href="#">
+                            <span class="material-symbols-outlined text-xl" data-icon="settings">settings</span>
+                            <span class="text-sm">Account Settings</span>
+                        </a>
+                        <div class="pt-4 mt-4 border-t border-outline-variant/20">
+                            <a class="flex items-center gap-3 px-4 py-3 rounded-xl text-error hover:bg-error-container transition-all duration-300 group"
+                                href="./login.html">
+                                <span class="material-symbols-outlined text-xl" data-icon="logout">logout</span>
+                                <span class="text-sm">Sign Out</span>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </aside>
+            <!-- Dashboard Content -->
+            <section class="flex-grow space-y-8">
+                <!-- Welcome Banner -->
+                <div
+                    class="relative overflow-hidden rounded-3xl bg-primary-container p-8 md:p-12 text-on-primary-container shadow-sm">
+                    <div class="relative z-10 max-w-lg">
+                        <h1 class="text-3xl md:text-5xl font-black tracking-tighter mb-4 leading-tight">Welcome back,
+                            Farmer Julian.</h1>
+                        <p class="text-lg opacity-90 font-medium">Your harvest is scheduled for Friday. You have 3
+                            active subscriptions delivering this week.</p>
+                    </div>
+                    <!-- Decorative Element -->
+                    <div class="absolute -right-12 -bottom-12 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+                </div>
+                <!-- Bento Grid for Stats & Quick Info -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Stat Card 1 -->
+                    <div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-tertiary mb-4" data-icon="eco">eco</span>
+                        <div class="text-3xl font-black text-on-surface mb-1">124kg</div>
+                        <div class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Produce
+                            Harvested</div>
+                    </div>
+                    <!-- Stat Card 2 -->
+                    <div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-primary mb-4"
+                            data-icon="account_balance_wallet">account_balance_wallet</span>
+                        <div class="text-3xl font-black text-on-surface mb-1">₱14,250</div>
+                        <div class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Total Savings
+                        </div>
+                    </div>
+                    <!-- Stat Card 3 -->
+                    <div class="bg-surface-container-lowest p-6 rounded-3xl shadow-sm border border-outline-variant/10">
+                        <span class="material-symbols-outlined text-secondary mb-4" data-icon="star">star</span>
+                        <div class="text-3xl font-black text-on-surface mb-1">Gold</div>
+                        <div class="text-xs uppercase tracking-widest text-on-surface-variant font-bold">Member Status
+                        </div>
+                    </div>
+                </div>
+                <!-- Main Content Sections -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Recent Orders -->
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end px-2">
+                            <h3 class="text-xl font-black tracking-tight text-on-surface">Recent Orders</h3>
+                            <a class="text-sm font-bold text-primary hover:underline" href="#">View All</a>
+                        </div>
+                        <div class="space-y-4">
+                            <!-- Order Item 1 -->
+                            <div
+                                class="bg-surface-container-low p-4 rounded-2xl flex items-center gap-4 transition-transform hover:scale-[1.01] duration-300">
+                                <div
+                                    class="w-16 h-16 rounded-xl bg-white flex items-center justify-center overflow-hidden">
+                                    <img class="w-full h-full object-cover"
+                                        data-alt="close up of fresh green organic vegetables in a wooden crate with natural sunlight"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm_QkpDe_hfoTRk5wfIIShmz47rOUv6KEMPT_rl5Q479f9hAp1Jg-866ql-ObH1OFelDdmolzFGg_pNIr6ThPXcgPbcRN_mHclaNDxFHK4rGQiXT_jNex3OugiIR-wR-GbXde6Dd1YawI0g9LUnmgpZy3raXgdn0DHPpJlW64q1zioIlPvB6iZTTpwSc9bGaxZ5EEwDGaG8n-q4qrYfFcfP7DASbDekvkabvkcYjd0MYg1oaoSWW6eQDG1ep38ejSN34ciNlpZqhn4" />
+                                </div>
+                                <div class="flex-grow">
+                                    <div class="text-sm font-bold text-on-surface">Weekly Harvest Box #42</div>
+                                    <div class="text-xs text-on-surface-variant">Ordered on Oct 24, 2023</div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-sm font-black text-primary">₱1,200</div>
+                                    <div
+                                        class="inline-block px-2 py-0.5 bg-primary-fixed text-on-primary-fixed-variant text-[10px] font-bold uppercase rounded-full">
+                                        In Transit</div>
+                                </div>
+                            </div>
+                            <!-- Order Item 2 -->
+                            <div
+                                class="bg-surface-container-low p-4 rounded-2xl flex items-center gap-4 transition-transform hover:scale-[1.01] duration-300">
+                                <div
+                                    class="w-16 h-16 rounded-xl bg-white flex items-center justify-center overflow-hidden">
+                                    <img class="w-full h-full object-cover"
+                                        data-alt="heap of red fresh tomatoes on a white rustic table with soft morning lighting"
+                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA74h-NMIs-mOjhBP7KXVU8QOBDUFDlSbwxkDCO1hKZdJ34GyFlvyEi2HVbjJeAIbR0Xi-yZ-iRZUS32LvEosQUOEkMDKFvBmuniAfnluThS7RDrwdx42WW45HJjegjhj7i2R_ejdn-0QN3jBaXaJcvQGVZ7Fd0wRleEt882FOSRGBUCasBjukhUYDK2r4ePTW5qsRrNOjV_J9Hutq502rP3PsR_CKuFQIwDIKP9NI9jVbKLMHStb90GF82kjqkKWbIYvhEfPKc_uJY" />
+                                </div>
+                                <div class="flex-grow">
+                                    <div class="text-sm font-bold text-on-surface">Premium Heirloom Tomatoes</div>
+                                    <div class="text-xs text-on-surface-variant">Ordered on Oct 18, 2023</div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-sm font-black text-primary">₱450</div>
+                                    <div
+                                        class="inline-block px-2 py-0.5 bg-surface-variant text-on-surface-variant text-[10px] font-bold uppercase rounded-full">
+                                        Delivered</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Personal Information Quick View -->
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end px-2">
+                            <h3 class="text-xl font-black tracking-tight text-on-surface">Personal Information</h3>
+                            <button class="text-sm font-bold text-primary hover:underline">Edit</button>
+                        </div>
+                        <div
+                            class="bg-surface-container-lowest p-8 rounded-3xl border border-outline-variant/10 space-y-6">
+                            <div class="grid grid-cols-2 gap-y-6 gap-x-4">
+                                <div>
+                                    <label
+                                        class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant block mb-1">Full
+                                        Name</label>
+                                    <p class="text-sm font-bold text-on-surface">Julian De Silva</p>
+                                </div>
+                                <div>
+                                    <label
+                                        class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant block mb-1">Email
+                                        Address</label>
+                                    <p class="text-sm font-bold text-on-surface">j.desilva@agrimail.com</p>
+                                </div>
+                                <div>
+                                    <label
+                                        class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant block mb-1">Phone
+                                        Number</label>
+                                    <p class="text-sm font-bold text-on-surface">+63 917 123 4567</p>
+                                </div>
+                                <div>
+                                    <label
+                                        class="text-[10px] uppercase tracking-widest font-bold text-on-surface-variant block mb-1">Member
+                                        Since</label>
+                                    <p class="text-sm font-bold text-on-surface">January 2022</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Shipping Addresses & Settings Section -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- Shipping Addresses -->
+                    <div class="lg:col-span-2 space-y-6">
+                        <div class="flex justify-between items-end px-2">
+                            <h3 class="text-xl font-black tracking-tight text-on-surface">Shipping Addresses</h3>
+                            <button class="text-sm font-bold text-primary flex items-center gap-1">
+                                <span class="material-symbols-outlined text-base" data-icon="add">add</span> Add New
+                            </button>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <!-- Address 1 -->
+                            <div class="p-6 rounded-3xl bg-surface-container-low border-2 border-primary relative">
+                                <div class="absolute top-4 right-4 text-primary">
+                                    <span class="material-symbols-outlined text-xl" data-icon="check_circle"
+                                        style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                </div>
+                                <div class="text-[10px] uppercase tracking-widest font-black text-primary mb-3">Primary
+                                    Residence</div>
+                                <p class="text-sm font-bold text-on-surface leading-relaxed">
+                                    88 Emerald Hill Street,<br />
+                                    Subdivision Phase 2,<br />
+                                    Quezon City, 1100
+                                </p>
+                                <div class="mt-4 pt-4 border-t border-outline-variant/20 flex gap-4">
+                                    <button
+                                        class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors">Edit</button>
+                                    <button
+                                        class="text-xs font-bold text-on-surface-variant hover:text-error transition-colors">Remove</button>
+                                </div>
+                            </div>
+                            <!-- Address 2 -->
+                            <div
+                                class="p-6 rounded-3xl bg-surface-container-low border border-transparent hover:border-outline-variant transition-all">
+                                <div
+                                    class="text-[10px] uppercase tracking-widest font-black text-on-surface-variant mb-3">
+                                    Office</div>
+                                <p class="text-sm font-bold text-on-surface leading-relaxed">
+                                    GikanUma Agri-Hub,<br />
+                                    Building C, Tech Valley,<br />
+                                    Makati City, 1200
+                                </p>
+                                <div class="mt-4 pt-4 border-t border-outline-variant/20 flex gap-4">
+                                    <button
+                                        class="text-xs font-bold text-on-surface-variant hover:text-primary transition-colors">Edit</button>
+                                    <button
+                                        class="text-xs font-bold text-on-surface-variant hover:text-error transition-colors">Remove</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Account Settings Quick Controls -->
+                    <div class="space-y-6">
+                        <div class="flex justify-between items-end px-2">
+                            <h3 class="text-xl font-black tracking-tight text-on-surface">Security</h3>
+                        </div>
+                        <div class="bg-surface-container-highest/30 p-6 rounded-3xl space-y-4">
+                            <button
+                                class="w-full flex justify-between items-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                                <div class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-primary" data-icon="lock">lock</span>
+                                    <span class="text-sm font-bold text-on-surface">Change Password</span>
+                                </div>
+                                <span class="material-symbols-outlined text-on-surface-variant"
+                                    data-icon="chevron_right">chevron_right</span>
+                            </button>
+                            <button
+                                class="w-full flex justify-between items-center p-4 bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+                                <div class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-primary"
+                                        data-icon="notifications">notifications</span>
+                                    <span class="text-sm font-bold text-on-surface">Alert Preferences</span>
+                                </div>
+                                <span class="material-symbols-outlined text-on-surface-variant"
+                                    data-icon="chevron_right">chevron_right</span>
+                            </button>
+                            <div class="p-4 bg-tertiary-container/10 rounded-2xl border border-tertiary-container/20">
+                                <div class="flex items-start gap-3">
+                                    <span class="material-symbols-outlined text-tertiary"
+                                        data-icon="verified_user">verified_user</span>
+                                    <div>
+                                        <div class="text-xs font-black text-tertiary uppercase tracking-wider mb-1">
+                                            Two-Factor Auth</div>
+                                        <p class="text-[10px] text-on-surface-variant font-medium leading-snug">Enhance
+                                            your security by enabling 2FA. Protect your harvest data.</p>
+                                    </div>
+                                </div>
+                                <button
+                                    class="mt-4 w-full py-2 bg-tertiary text-white text-xs font-black uppercase tracking-widest rounded-full">Enable
+                                    Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full mt-auto bg-[#f3f4ef] dark:bg-[#1a1c19] tonal-shift-no-border flat no shadows">
+        <div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 max-w-7xl mx-auto w-full">
+            <div class="font-headline font-black text-[#49610a] text-xl">
+                GikanUma Editorial Agriculture.
+            </div>
+            <div class="flex flex-wrap justify-center gap-8">
+                <a class="font-public-sans text-xs uppercase tracking-widest text-[#45483a] opacity-80 hover:opacity-100 hover:underline decoration-[#49610a] underline-offset-4"
+                    href="#">Terms of Service</a>
+                <a class="font-public-sans text-xs uppercase tracking-widest text-[#45483a] opacity-80 hover:opacity-100 hover:underline decoration-[#49610a] underline-offset-4"
+                    href="#">Privacy Policy</a>
+                <a class="font-public-sans text-xs uppercase tracking-widest text-[#45483a] opacity-80 hover:opacity-100 hover:underline decoration-[#49610a] underline-offset-4"
+                    href="#">Sustainability Report</a>
+                <a class="font-public-sans text-xs uppercase tracking-widest text-[#45483a] opacity-80 hover:opacity-100 hover:underline decoration-[#49610a] underline-offset-4"
+                    href="#">Farmer Login</a>
+            </div>
+            <div class="font-public-sans text-xs uppercase tracking-widest text-[#45483a] opacity-60">
+                © 2024 GikanUma. The Digital Harvest.
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

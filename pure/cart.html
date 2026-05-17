@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Your Harvest Cart | GikanUma</title>
+    <!-- Google Fonts: Manrope & Public Sans -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Public+Sans:ital,wght@0,100..900;1,100..900&amp;display=swap"
+        rel="stylesheet" />
+    <!-- Material Symbols Outlined -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#edeee9",
+                        "primary": "#49610a",
+                        "tertiary-fixed-dim": "#f3be55",
+                        "primary-fixed-dim": "#b4d171",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1a1c19",
+                        "inverse-on-surface": "#f0f1ec",
+                        "secondary": "#75584d",
+                        "surface": "#f9faf5",
+                        "on-secondary-fixed": "#2b160f",
+                        "background": "#f9faf5",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c5c8b6",
+                        "outline": "#757969",
+                        "surface-variant": "#e2e3de",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#4f6610",
+                        "secondary-fixed-dim": "#e4beb2",
+                        "on-primary-container": "#edffbd",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#261900",
+                        "secondary-fixed": "#ffdbce",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e2e3de",
+                        "surface-container-low": "#f3f4ef",
+                        "on-tertiary-container": "#fff5eb",
+                        "on-secondary-fixed-variant": "#5b4137",
+                        "inverse-primary": "#b4d171",
+                        "tertiary-container": "#936a00",
+                        "tertiary": "#745300",
+                        "primary-fixed": "#d0ee8a",
+                        "tertiary-fixed": "#ffdea5",
+                        "on-primary-fixed-variant": "#394d00",
+                        "on-surface-variant": "#45483a",
+                        "secondary-container": "#fed7ca",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9faf5",
+                        "inverse-surface": "#2e312e",
+                        "on-tertiary-fixed-variant": "#5d4200",
+                        "surface-container-high": "#e7e9e4",
+                        "on-primary-fixed": "#151f00",
+                        "on-secondary-container": "#795c51",
+                        "primary-container": "#617a24",
+                        "on-background": "#1a1c19",
+                        "surface-dim": "#d9dad6"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Public Sans", "sans-serif"],
+                        "label": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .brand-font {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background text-on-surface selection:bg-primary-fixed-dim selection:text-on-primary-fixed min-h-screen flex flex-col">
+    <!-- Top Navigation Bar -->
+    <header class="fixed top-0 w-full z-50 bg-[#f9faf5]/80 backdrop-blur-md shadow-sm shadow-[#1a1c19]/5">
+        <nav class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-2xl font-bold tracking-tighter text-[#49610a] brand-font">GikanUma</div>
+            <div class="flex items-center gap-12">
+                <span class="text-2xl font-bold tracking-tighter text-[#49610a] font-headline">GikanUma</span>
+                <div class="hidden md:flex gap-8 items-center">
+                    <a class="font-headline text-sm tracking-tight text-[#45483a] font-medium hover:text-[#617a24] transition-colors duration-300 py-1"
+                        href="./home.html">Home</a>
+                    <a class="font-headline text-sm tracking-tight text-[#45483a] font-medium hover:text-[#617a24] transition-colors duration-300 py-1"
+                        href="./about.html">About Us</a>
+                    <a class="font-headline text-sm tracking-tight text-[#45483a] font-medium hover:text-[#617a24] transition-colors duration-300 py-1"
+                        href="./support.html">Support</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <button
+                    class="text-[#49610a] dark:text-[#d1e892] font-extrabold border-b-2 border-[#49610a] scale-95 active:scale-90 transition-transform">
+                    <span class="material-symbols-outlined"><a href="./cart.html">shopping_cart</a></span>
+                </button>
+                <button class="text-[#45483a] hover:text-[#49610a] transition-transform scale-95 active:scale-90">
+                    <a href="./account.html">
+                        <span class="material-symbols-outlined">account_circle</span>
+                    </a>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main class="flex-grow pt-28 pb-20 px-6 max-w-7xl mx-auto w-full">
+        <div class="mb-12">
+            <h1 class="text-5xl font-extrabold tracking-tight text-on-surface mb-2">Review Your Harvest</h1>
+            <p class="text-on-surface-variant font-body">Carefully curated selections from local farms, ready for your
+                kitchen.</p>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <!-- Cart Items Column -->
+            <div class="lg:col-span-8 space-y-6">
+                <!-- Cart Item 1 -->
+                <div
+                    class="bg-surface-container-lowest p-6 flex flex-col sm:flex-row items-center gap-6 group hover:shadow-sm transition-all duration-300 rounded-xl">
+                    <div class="w-32 h-32 flex-shrink-0 bg-surface-container overflow-hidden rounded-lg">
+                        <img alt="Organic heirloom carrots"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Close-up of vibrant orange organic heirloom carrots with green leafy tops on a rustic wooden surface with natural lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2PA4IecEcbdltR676yz-KEXkbsDVV1yUPpqT7np37TUZcEgdOHS1iqRxkvAexfljeLWfgtfsQZQCt8uLpOAKG9yJK6ETFQg_jhg8XlcCflBDmoM0dQ5ksQoRDR2rZJIZo1zxOfkixEQMhDi7Z4S43Jgty8IWj9DKzn54ugd9POdfXOm3AtKy8QQRHG7RafKC_HX3NKw6unEhyGW-hGeMW-q3nmUCdxYjZYY7hoKJYd6Kyx4S_mXc0ZliS2RQojja5VfFlf19O2oLV" />
+                    </div>
+                    <div class="flex-grow text-center sm:text-left">
+                        <h3 class="text-xl font-bold text-on-surface mb-1">Heirloom Rainbow Carrots</h3>
+                        <p class="text-sm text-on-surface-variant mb-4">Farm: Green Valley Organics</p>
+                        <div class="flex items-center justify-center sm:justify-start gap-4">
+                            <div class="flex items-center bg-surface-container-high rounded-full px-3 py-1">
+                                <button class="p-1 hover:text-primary transition-colors"><span
+                                        class="material-symbols-outlined text-sm">remove</span></button>
+                                <span class="px-4 font-bold text-sm">2</span>
+                                <button class="p-1 hover:text-primary transition-colors"><span
+                                        class="material-symbols-outlined text-sm">add</span></button>
+                            </div>
+                            <button
+                                class="text-sm text-on-surface-variant hover:text-error transition-colors flex items-center gap-1">
+                                <span class="material-symbols-outlined text-base">delete</span> Remove
+                            </button>
+                        </div>
+                    </div>
+                    <div class="text-right sm:ml-auto">
+                        <p class="text-lg font-extrabold text-primary">$12.50</p>
+                        <p class="text-xs text-on-surface-variant">$6.25 / lb</p>
+                    </div>
+                </div>
+                <!-- Cart Item 2 -->
+                <div
+                    class="bg-surface-container-lowest p-6 flex flex-col sm:flex-row items-center gap-6 group hover:shadow-sm transition-all duration-300 rounded-xl">
+                    <div class="w-32 h-32 flex-shrink-0 bg-surface-container overflow-hidden rounded-lg">
+                        <img alt="Artisanal sourdough loaf"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Golden brown crusty artisanal sourdough loaf on a linen cloth with crumbs and dramatic side lighting highlighting the texture"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc9cJFp3iO82zIhOwGSSqnP75ogFuYmvU-saSxfRHRd2jZhhaFZZUIpqhAH7WmpQLYpoK4f9n99Qu3pZvVvnBs8_Rzn888_QLxgsybo8qqUKKCOXFqyXBPNnwcvCFbd0RAzd9o71FZZ2DMMhayQcntoT9DEgkU41YpPDBZeqxG2knQUqTgKSzGp09vhGzBU21QrUE3o7-e-v4yfJEuWpqG5_YJfwZy7dMlgtkspk-0hxmSaMuisC-u6_GLdgkUbcKSmawsIaVvCq24" />
+                    </div>
+                    <div class="flex-grow text-center sm:text-left">
+                        <h3 class="text-xl font-bold text-on-surface mb-1">Morning Sourdough</h3>
+                        <p class="text-sm text-on-surface-variant mb-4">Bakery: GikanUma Hearth</p>
+                        <div class="flex items-center justify-center sm:justify-start gap-4">
+                            <div class="flex items-center bg-surface-container-high rounded-full px-3 py-1">
+                                <button class="p-1 hover:text-primary transition-colors"><span
+                                        class="material-symbols-outlined text-sm">remove</span></button>
+                                <span class="px-4 font-bold text-sm">1</span>
+                                <button class="p-1 hover:text-primary transition-colors"><span
+                                        class="material-symbols-outlined text-sm">add</span></button>
+                            </div>
+                            <button
+                                class="text-sm text-on-surface-variant hover:text-error transition-colors flex items-center gap-1">
+                                <span class="material-symbols-outlined text-base">delete</span> Remove
+                            </button>
+                        </div>
+                    </div>
+                    <div class="text-right sm:ml-auto">
+                        <p class="text-lg font-extrabold text-primary">$8.00</p>
+                        <p class="text-xs text-on-surface-variant">$8.00 / ea</p>
+                    </div>
+                </div>
+                <!-- Cart Item 3 -->
+                <div
+                    class="bg-surface-container-lowest p-6 flex flex-col sm:flex-row items-center gap-6 group hover:shadow-sm transition-all duration-300 rounded-xl">
+                    <div class="w-32 h-32 flex-shrink-0 bg-surface-container overflow-hidden rounded-lg">
+                        <img alt="Fresh organic honey"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Jar of golden wildflower honey with a wooden dipper on a sunlit table with flowers in soft focus background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfQd4n9QANElza3ET64-dO0HjAAVGoZMEnjAg-N11g-9eqPnRRdMTGXee6eH6n473cwv_ugHNyr7rq8yJdhNVN_2fzCHqEp-Ure2mfafPn07sKSU9Ydw34311iEUVIuKUnM8bIrq3QCCDMWcN-jSLEHa1EAY5kW6NEIOf_-fhzzunAZhsJVA5SCWwyYsHloUxZDGGs8ObsyDB6F4vn73s94cRfV_yRT8nNZquo_7EL0YECEuwmI-Iqm46g1yNtOR09LvCerJFPlzvh" />
+                    </div>
+                    <div class="flex-grow text-center sm:text-left">
+                        <h3 class="text-xl font-bold text-on-surface mb-1">Wildflower Honey</h3>
+                        <p class="text-sm text-on-surface-variant mb-4">Apiary: Sunfield Meadows</p>
+                        <div class="flex items-center justify-center sm:justify-start gap-4">
+                            <div class="flex items-center bg-surface-container-high rounded-full px-3 py-1">
+                                <button class="p-1 hover:text-primary transition-colors"><span
+                                        class="material-symbols-outlined text-sm">remove</span></button>
+                                <span class="px-4 font-bold text-sm">1</span>
+                                <button class="p-1 hover:text-primary transition-colors"><span
+                                        class="material-symbols-outlined text-sm">add</span></button>
+                            </div>
+                            <button
+                                class="text-sm text-on-surface-variant hover:text-error transition-colors flex items-center gap-1">
+                                <span class="material-symbols-outlined text-base">delete</span> Remove
+                            </button>
+                        </div>
+                    </div>
+                    <div class="text-right sm:ml-auto">
+                        <p class="text-lg font-extrabold text-primary">$15.00</p>
+                        <p class="text-xs text-on-surface-variant">$15.00 / jar</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Summary Column -->
+            <aside class="lg:col-span-4 sticky top-28">
+                <div class="bg-surface-container-low rounded-2xl p-8 space-y-6">
+                    <h2 class="text-2xl font-black text-on-surface">Order Summary</h2>
+                    <div class="space-y-4 border-b border-outline-variant/30 pb-6">
+                        <div class="flex justify-between text-on-surface-variant">
+                            <span class="font-medium">Subtotal</span>
+                            <span class="font-bold text-on-surface">$35.50</span>
+                        </div>
+                        <div class="flex justify-between text-on-surface-variant">
+                            <span class="font-medium">Estimated Taxes</span>
+                            <span class="font-bold text-on-surface">$2.84</span>
+                        </div>
+                        <div class="flex justify-between text-on-surface-variant">
+                            <span class="font-medium">Shipping Estimate</span>
+                            <span class="font-bold text-primary">FREE</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-baseline py-2">
+                        <span class="text-xl font-bold">Total</span>
+                        <div class="text-right">
+                            <span class="text-3xl font-black text-primary">$38.34</span>
+                            <p class="text-[10px] uppercase tracking-widest text-on-surface-variant mt-1">USD
+                                (Calculated at checkout)</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3 pt-4">
+                        <button
+                            class="w-full bg-primary text-on-primary py-5 rounded-full font-black text-lg tracking-wide hover:bg-primary-container hover:shadow-lg transform active:scale-95 transition-all duration-300">
+                            Proceed to Checkout
+                        </button>
+                        <p class="text-center text-[10px] text-on-surface-variant px-6">
+                            By clicking Proceed to Checkout, you agree to our Terms of Service and Privacy Policy.
+                        </p>
+                    </div>
+                    <!-- Trust Element -->
+                    <div class="bg-surface-container-highest/50 p-4 rounded-xl flex items-start gap-3">
+                        <span class="material-symbols-outlined text-tertiary">potted_plant</span>
+                        <div>
+                            <p class="text-xs font-bold text-on-surface mb-0.5">Farm-to-Door Promise</p>
+                            <p class="text-[10px] text-on-surface-variant leading-relaxed">Your order supports 3 local
+                                family farms. Freshly harvested and delivered within 24 hours of selection.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Help Link -->
+                <div class="mt-6 text-center">
+                    <a class="text-xs font-bold text-primary hover:underline decoration-primary underline-offset-4 flex items-center justify-center gap-2"
+                        href="#">
+                        <span class="material-symbols-outlined text-sm">support_agent</span> Need help with your order?
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full mt-auto bg-[#f3f4ef] dark:bg-[#1a1c19] text-[#49610a]">
+        <div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 max-w-7xl mx-auto">
+            <div class="text-left">
+                <div class="font-manrope font-black text-2xl mb-2 text-[#49610a]">GikanUma</div>
+                <p class="font-public-sans text-xs uppercase tracking-widest opacity-80">© 2024 GikanUma Editorial
+                    Agriculture. The Digital Harvest.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-x-8 gap-y-4">
+                <a class="font-public-sans text-xs uppercase tracking-widest hover:underline decoration-[#49610a] underline-offset-4 transition-all opacity-80 hover:opacity-100"
+                    href="#">Terms of Service</a>
+                <a class="font-public-sans text-xs uppercase tracking-widest hover:underline decoration-[#49610a] underline-offset-4 transition-all opacity-80 hover:opacity-100"
+                    href="#">Privacy Policy</a>
+                <a class="font-public-sans text-xs uppercase tracking-widest hover:underline decoration-[#49610a] underline-offset-4 transition-all opacity-80 hover:opacity-100"
+                    href="#">Sustainability Report</a>
+                <a class="font-public-sans text-xs uppercase tracking-widest hover:underline decoration-[#49610a] underline-offset-4 transition-all opacity-80 hover:opacity-100"
+                    href="#">Farmer Login</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

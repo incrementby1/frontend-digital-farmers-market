@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;family=Public+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#edeee9",
+                        "primary": "#49610a",
+                        "tertiary-fixed-dim": "#f3be55",
+                        "primary-fixed-dim": "#b4d171",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1a1c19",
+                        "inverse-on-surface": "#f0f1ec",
+                        "secondary": "#75584d",
+                        "surface": "#f9faf5",
+                        "on-secondary-fixed": "#2b160f",
+                        "background": "#f9faf5",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c5c8b6",
+                        "outline": "#757969",
+                        "surface-variant": "#e2e3de",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#4f6610",
+                        "secondary-fixed-dim": "#e4beb2",
+                        "on-primary-container": "#edffbd",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#261900",
+                        "secondary-fixed": "#ffdbce",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e2e3de",
+                        "surface-container-low": "#f3f4ef",
+                        "on-tertiary-container": "#fff5eb",
+                        "on-secondary-fixed-variant": "#5b4137",
+                        "inverse-primary": "#b4d171",
+                        "tertiary-container": "#936a00",
+                        "tertiary": "#745300",
+                        "primary-fixed": "#d0ee8a",
+                        "tertiary-fixed": "#ffdea5",
+                        "on-primary-fixed-variant": "#394d00",
+                        "on-surface-variant": "#45483a",
+                        "secondary-container": "#fed7ca",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9faf5",
+                        "inverse-surface": "#2e312e",
+                        "on-tertiary-fixed-variant": "#5d4200",
+                        "surface-container-high": "#e7e9e4",
+                        "on-primary-fixed": "#151f00",
+                        "on-secondary-container": "#795c51",
+                        "primary-container": "#617a24",
+                        "on-background": "#1a1c19",
+                        "surface-dim": "#d9dad6"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Public Sans"],
+                        "label": ["Public Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "1rem", "xl": "1.25rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .editorial-gradient {
+            background: linear-gradient(135deg, #49610a 0%, #617a24 100%);
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 w-full z-50 bg-[#f9faf5]/80 backdrop-blur-md shadow-sm shadow-[#1a1c19]/5">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="flex items-center gap-12">
+                <span class="text-2xl font-bold tracking-tighter text-[#49610a] font-headline">GikanUma</span>
+                <div class="hidden md:flex gap-8 items-center">
+                    <a class="font-headline text-sm tracking-tight text-[#49610a] font-extrabold border-b-2 border-[#49610a] py-1"
+                        href="#">Home</a>
+                    <a class="font-headline text-sm tracking-tight text-[#45483a] font-medium hover:text-[#617a24] transition-colors duration-300 py-1"
+                        href="./about.html">About Us</a>
+                    <a class="font-headline text-sm tracking-tight text-[#45483a] font-medium hover:text-[#617a24] transition-colors duration-300 py-1"
+                        href="./support.html">Support</a>
+                </div>
+            </div>
+            <div class="flex items-center gap-6">
+                <div
+                    class="hidden lg:flex items-center bg-surface-container-high px-4 py-2 rounded-full w-64 group focus-within:ring-2 ring-primary/20 transition-all">
+                    <span class="material-symbols-outlined text-on-surface-variant text-sm mr-2">search</span>
+                    <input
+                        class="bg-transparent border-none focus:ring-0 text-sm w-full p-0 placeholder-on-surface-variant/60"
+                        placeholder="Search harvest..." type="text" />
+                </div>
+                <div class="flex items-center gap-4">
+                    <button class="text-[#45483a] hover:text-[#49610a] transition-transform scale-95 active:scale-90">
+                        <span class="material-symbols-outlined"><a href="./cart.html">shopping_cart</a></span>
+                    </button>
+                    <button class="text-[#45483a] hover:text-[#49610a] transition-transform scale-95 active:scale-90">
+                        <a href="./account.html">
+                            <span class="material-symbols-outlined">account_circle</span>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-24 pb-20">
+        <!-- Hero Section -->
+        <section class="max-w-7xl mx-auto px-8 mb-16">
+            <div class="relative overflow-hidden rounded-xl h-[500px] flex items-center editorial-gradient">
+                <div class="absolute inset-0 opacity-20">
+                    <img class="w-full h-full object-cover"
+                        data-alt="lush organic vegetable farm rows in morning mist with soft golden sunlight illuminating the green leaves"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZUUmIb_Rydb4QbrS_V9KqLMhYU0t-1ZNzum3d4O-sh_4dg2PyL14v-4J7JtkhnBH23VnpgK3bW-7SiygFUR-ZrVMKF7rlUZ1uQqSHi1rkQ9TD_IT02BLzv5c-ZrCJl_La11av0P6yzbpZ60MgVHq_LkhROAo2t7oUoapq6HNtvQU60bHkWW6rxpiKMoNpSuAKDCYuGYb_HVZX-FeNsorSYirzgFBYzciLvimHeHWdlt3_77yywic7wjPos9bZubh2Wqkxle2jbbi4" />
+                </div>
+                <div class="relative z-10 px-12 max-w-2xl">
+                    <span
+                        class="inline-block px-4 py-1 rounded-full bg-tertiary text-on-tertiary text-xs font-label uppercase tracking-widest mb-6">Direct
+                        from Farm</span>
+                    <h1
+                        class="text-6xl font-headline font-extrabold text-on-primary-container leading-[1.1] mb-6 tracking-tighter">
+                        Experience the <br />Digital Harvest.
+                    </h1>
+                    <p class="text-on-primary-container/80 text-lg mb-8 font-light leading-relaxed">
+                        Curated fresh produce from local soil to your doorstep. Supporting farmers through transparent
+                        editorial commerce.
+                    </p>
+                    <div class="flex gap-4">
+                        <button
+                            class="bg-surface-container-lowest text-primary font-bold px-8 py-4 rounded-full shadow-lg hover:translate-y-[-4px] transition-all">
+                            Shop Fresh Arrivals
+                        </button>
+                        <button
+                            class="bg-primary-container border border-on-primary-container/20 text-on-primary-container font-semibold px-8 py-4 rounded-full hover:bg-primary transition-colors">
+                            Our Story
+                        </button>
+                    </div>
+                </div>
+                <div class="hidden lg:block absolute right-0 top-0 h-full w-1/3 p-8">
+                    <div
+                        class="bg-surface-container-lowest/10 backdrop-blur-md rounded-xl h-full w-full border border-white/10 flex flex-col justify-end p-8 transform rotate-2">
+                        <img class="rounded-lg h-48 w-full object-cover mb-6"
+                            data-alt="close up shot of vibrant green kale leaves with water droplets and dramatic side lighting on a dark surface"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuADeDmtRqhh-QqqKD0LP_368e2TeAHXnCHr-kSiKEHeisHoDVybpAQbmjAE-RX1K9Qi5lSrEpKn_qbsN4QG_oHYC41BVOKkX5IOJxXHJO-wpcQyW0wu423DmPfVumU1CpdMiQJzXJE_enN586iQaVimuYirhIPGOK3aVOmXsbXf8aTxF399hFAN5QCLr6mZDozZzoOrLFLV2VKc_4tKEjKh3qemIFgD0FfAkelO9eMcB2AxQRYuBxRONAD6SSZ8uq6glMW8IPPOnnHi" />
+                        <div class="text-on-primary-container">
+                            <p class="text-xs uppercase font-label tracking-widest opacity-60 mb-2">Featured Producer
+                            </p>
+                            <h3 class="text-xl font-headline font-bold">Bukidnon Highland Farms</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- The Harvest Slider (Categories) -->
+        <section class="max-w-7xl mx-auto px-8 mb-20">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h2 class="text-3xl font-headline font-bold tracking-tight text-on-surface">Browse by Variety</h2>
+                    <p class="text-on-surface-variant font-light">Root vegetables and seasonal staples</p>
+                </div>
+                <div class="flex gap-2">
+                    <button
+                        class="p-2 rounded-full border border-outline-variant hover:bg-surface-container transition-colors">
+                        <span class="material-symbols-outlined">chevron_left</span>
+                    </button>
+                    <button
+                        class="p-2 rounded-full border border-outline-variant hover:bg-surface-container transition-colors">
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+            <div class="flex gap-8 overflow-x-auto pb-6 no-scrollbar">
+                <!-- Cabbage -->
+                <div class="flex-none group cursor-pointer">
+                    <div
+                        class="w-40 h-40 rounded-full bg-surface-container border-4 border-transparent group-hover:border-primary/20 transition-all overflow-hidden mb-4 p-2">
+                        <img class="w-full h-full object-cover rounded-full"
+                            data-alt="overhead view of a fresh whole green cabbage with textured leaves on a clean beige background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbNtG2RBxHicSEIIUw2kN4zGUa5yOMOFX9N79j4nhJlwOdr2ayHB9TGs3I401SQv34x1qec3kXK4hq-m2IDxvQZexEoxLyc6rRFadMEM9pGWSrun0x7CWpVvEETcyZX6dAHyJEowYYRsP5NpDp5gV7Ur8jzDw7QKW8uY6CX5PEo4dTKotK2Vbusbpden5qD80YdU1w_XZktNUWQ0AxBb8_QJ6XKBu3SMz2TNPwkCHAWpZbChDyKY033Q0-WfbrpwMoVWKBl5f8j5fo" />
+                    </div>
+                    <p
+                        class="text-center font-label font-semibold text-on-surface group-hover:text-primary transition-colors">
+                        Cabbage</p>
+                </div>
+                <!-- Cassava -->
+                <div class="flex-none group cursor-pointer">
+                    <div
+                        class="w-40 h-40 rounded-full bg-surface-container border-4 border-transparent group-hover:border-primary/20 transition-all overflow-hidden mb-4 p-2">
+                        <img class="w-full h-full object-cover rounded-full"
+                            data-alt="raw whole cassava roots with brown skin and white flesh details on a neutral stone background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZVwxYc2JwrMoMaOARFzFIrbjJlcfwKz9scvrWa2PrWME9nMxavT5-jC4BJJoTD029XTr7_gm14BQGde89O4AD2sKl5pfalT5ai6FJoiVsNurbHJkPXWpafVPjx66SaLwk0mdK6M2n4mY7MON-qqTlChjxEOX989CkDiCEOFWN55P5l9-bycuayBPSCU50buiVW21FrZyuBqDuKO_KuUAp9u7bNWS53nQrKH3Jspu5waDA4hAxqjgcaROjHeF-CXnXT_cTn1QsNXaJ" />
+                    </div>
+                    <p
+                        class="text-center font-label font-semibold text-on-surface group-hover:text-primary transition-colors">
+                        Cassava</p>
+                </div>
+                <!-- Gabi -->
+                <div class="flex-none group cursor-pointer">
+                    <div
+                        class="w-40 h-40 rounded-full bg-surface-container border-4 border-transparent group-hover:border-primary/20 transition-all overflow-hidden mb-4 p-2">
+                        <img class="w-full h-full object-cover rounded-full"
+                            data-alt="fresh taro or gabi roots with fuzzy brown skin on a rustic wooden table"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMkC2Ax89yWO2KUqtMXhtDG5zrmJf0mkC8eBtSYbjFIPh4YBnBnsGgtYt3mAzAfESpWhaIuf1bwegSIugy2ubGF5lT562uWeLwbuscWBX8ncQb1Njkj34D9bA63k7qPi3O_bgBMRE1khAY3GJKioo5TQ3olbV3qMPkQJchqaJQ0ymdQXxPc1tfzvAK3li7agrlevMQmADD89_4ptjnB8pHo-9Ot1nSYSNzAnlJQ8oo32AvRuMSeHOXBClMPbFu_NqgSy93kz58UAML" />
+                    </div>
+                    <p
+                        class="text-center font-label font-semibold text-on-surface group-hover:text-primary transition-colors">
+                        Gabi</p>
+                </div>
+                <!-- Garlic -->
+                <div class="flex-none group cursor-pointer">
+                    <div
+                        class="w-40 h-40 rounded-full bg-surface-container border-4 border-transparent group-hover:border-primary/20 transition-all overflow-hidden mb-4 p-2">
+                        <img class="w-full h-full object-cover rounded-full"
+                            data-alt="cluster of fresh white garlic bulbs with purple tinged skin on a clean minimalist surface"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7EXQkiEI_tMtsfAhCQs-JE9i6nVBOiQjUIRU-o1-H1rmWzQB5LVSCjKhAmM605lB2IphTY5LP9cMigogFFN6bpVvt19k4lCv5tQ8URGdfsurFkhZsHsG1JNpU1zk5o643VS531bZ6A7OnzcV_5dP9Ns_GYUI4THDuCZWSXxO8qvukICo2mb8U_qK39H3gKZuvLy62bChlYSqj4sGN4M7a3zYi-G31nHgSniAKDT2hvuiexfXZWccScGgusEGYZIoLzPicJxnPbhoW" />
+                    </div>
+                    <p
+                        class="text-center font-label font-semibold text-on-surface group-hover:text-primary transition-colors">
+                        Garlic</p>
+                </div>
+                <!-- Ginger -->
+                <div class="flex-none group cursor-pointer">
+                    <div
+                        class="w-40 h-40 rounded-full bg-surface-container border-4 border-transparent group-hover:border-primary/20 transition-all overflow-hidden mb-4 p-2">
+                        <img class="w-full h-full object-cover rounded-full"
+                            data-alt="fresh gnarled ginger root with light skin on a soft focus garden background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG36pAXkw-X7iU-C0AT5W3BJ2ESYmcwvkxOEVEaDNUldQvoRQF1AN0Yrf6R5b3rdyKGN-dfZf6QWSyxGJSeVw5lOQig7c5cb0awae3w05t3Fqae4r2X0g1UHLw4C2VNEamaEKROOSDn4n8uu5_yEtX2nizAcvBhZkAyxVxugjcf4m7daFoz-WBZEed14reLdCRJrZkcVYSef01ktVW4pYpH018kCkLpayahD0rjzyWdlLPl7mvBiIYkXTI1fsPGHveoPRUe7LB8qoE" />
+                    </div>
+                    <p
+                        class="text-center font-label font-semibold text-on-surface group-hover:text-primary transition-colors">
+                        Ginger</p>
+                </div>
+            </div>
+        </section>
+        <!-- Featured Products: Ang tinda karun -->
+        <section class="max-w-7xl mx-auto px-8 py-16 bg-surface-container rounded-[2rem]">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
+                <div>
+                    <h2 class="text-4xl font-headline font-black text-on-surface tracking-tighter">Ang tinda karun</h2>
+                    <p class="text-on-surface-variant mt-2 font-body text-lg">Today's hand-picked selection from our
+                        network of growers.</p>
+                </div>
+                <button
+                    class="flex items-center gap-2 font-label text-primary font-bold hover:underline decoration-2 underline-offset-8">
+                    View full catalogue
+                    <span class="material-symbols-outlined text-sm">arrow_forward_ios</span>
+                </button>
+            </div>
+            <!-- Product Bento Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product Card 1 -->
+                <div
+                    class="bg-surface-container-lowest p-5 rounded-xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(26,28,25,0.06)] group">
+                    <div class="relative mb-6 rounded-lg overflow-hidden aspect-square">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            data-alt="bunch of long bright orange organic carrots with leafy green tops on a white background"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDtc_q5H07oDcHoahfzj4Z0DJOJeQ8EHIJ3MpmhVQuJxLA7hFlKiRWyCoQJuIMjL_adWkSmqrZ-mJUK_SHHBjay3ctQIHt-QtL07K4SXirbzX4uNXS46JrwbT3oKAHslEinDLz0FnpSu2jwzg3H7rBdaeGxQ4xmj4UQBb2FZ38Jod-4U7JeRrT6srq7RGVkN6kBx6Ww2OlLWnqkddof5yO24amZEwvhKfgP0eGEVjICtY4RYCtm2brOfSoKpmm2w10yDj2aE6lCDZs" />
+                        <div
+                            class="absolute top-3 left-3 px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed text-[10px] font-black rounded-full uppercase tracking-wider">
+                            Fresh Picked</div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-xs text-outline font-label uppercase tracking-widest mb-1">Root Vegetables
+                            </p>
+                            <h3 class="text-xl font-headline font-bold text-on-surface">Farm-Fresh Carrots</h3>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-lg font-headline font-extrabold text-primary">₱45.00 <span
+                                    class="text-xs font-normal text-on-surface-variant">/ kg</span></p>
+                            <button
+                                class="bg-primary p-2.5 rounded-full text-on-primary hover:bg-primary-container transition-colors shadow-md">
+                                <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div
+                    class="bg-surface-container-lowest p-5 rounded-xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(26,28,25,0.06)] group">
+                    <div class="relative mb-6 rounded-lg overflow-hidden aspect-square">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            data-alt="group of white button mushrooms in a small wooden bowl on a dark moody surface"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD00mf5jCp3qSSkAKeI4S95HTwOiwjligobNFGzu2UQnNxk6vAKuaoyBCl3UKvnE6UXjN6vdHlpKftUgpNYts_gU5O7pjOlN2oeo6cGddbbmQ7v0P8ydRy3dwWQwhVdO84qWGdni6lC9lGnK5wbgGlusrvjExozvsZRsQ-f1SZpbqksWS9Tm35HiJb0XHtcb6aB7l8JJsms0SJkAyyHtkeJ0cv5Wcc_8kII5F21sWQtNza6c6bS97Hye6YAi38M9Lv3Awv9mDi89wvT" />
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-xs text-outline font-label uppercase tracking-widest mb-1">Mushrooms</p>
+                            <h3 class="text-xl font-headline font-bold text-on-surface">Button Mushrooms</h3>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-lg font-headline font-extrabold text-primary">₱120.00 <span
+                                    class="text-xs font-normal text-on-surface-variant">/ pack</span></p>
+                            <button
+                                class="bg-primary p-2.5 rounded-full text-on-primary hover:bg-primary-container transition-colors shadow-md">
+                                <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div
+                    class="bg-surface-container-lowest p-5 rounded-xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(26,28,25,0.06)] group">
+                    <div class="relative mb-6 rounded-lg overflow-hidden aspect-square">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            data-alt="close up of red and yellow bell peppers with glossy skin and vibrant colors"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTnlpKp76uNz6wWb8tVkMB5mQBqQouK1c6tekqtQJs5MyQI1yfiJBDuaScjXKciqAHR9wMoRH9aHeg-ZPkZ5fX3bMpmkGutUGu6CerLpWEAd0uHIBZdeGsW10YyB6tsncaDN3H3vwWbP45-DicZQZxtsvyOXuXIN1NWVXPQpZJhaBnLq9MG-suX-gZ_ubBIp1IfBGxrc3Znl6IAetCEcULdeSReTjsw3hIAaKkcje8tyd4oB1ugrXZtRD8UJFuao_n4Mfdmhb_eY9z" />
+                        <div
+                            class="absolute top-3 right-3 px-3 py-1 bg-secondary-container text-on-secondary-container text-[10px] font-black rounded-full uppercase tracking-wider">
+                            Organic</div>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-xs text-outline font-label uppercase tracking-widest mb-1">Bell Peppers</p>
+                            <h3 class="text-xl font-headline font-bold text-on-surface">Mixed Bell Peppers</h3>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-lg font-headline font-extrabold text-primary">₱180.00 <span
+                                    class="text-xs font-normal text-on-surface-variant">/ kg</span></p>
+                            <button
+                                class="bg-primary p-2.5 rounded-full text-on-primary hover:bg-primary-container transition-colors shadow-md">
+                                <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 4 -->
+                <div
+                    class="bg-surface-container-lowest p-5 rounded-xl transition-all duration-300 hover:shadow-[0_20px_40px_rgba(26,28,25,0.06)] group">
+                    <div class="relative mb-6 rounded-lg overflow-hidden aspect-square">
+                        <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                            data-alt="pile of fresh organic russet potatoes with light brown skin on a burlap sack"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmdVsr4nx24W-4uGCPFqe9c_DtPyEoRqGaiRrjGWdWDqP-QLyWoidqpA84xPCeiLb1Uuqf-kUilnBr-GTNt6wnNtHVDEgC9gjYsbH3neSnUXhG4jSkBNBZ4Q2qju8bl-0lUTKOXtmOQvAxCmlWDHBlv3aGyoPlE4Q4MlIY6yXWX1QKHRZJFClgIhJWrOmn5DX819ghZKHyxB9aUGl4LcZA602XKMkEfPbqCE7uj0fIqQsnrshPEkFwKZHgLaOQaWVq2ShQerZsBVTE" />
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-xs text-outline font-label uppercase tracking-widest mb-1">Tubers</p>
+                            <h3 class="text-xl font-headline font-bold text-on-surface">Native Potatoes</h3>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <p class="text-lg font-headline font-extrabold text-primary">₱65.00 <span
+                                    class="text-xs font-normal text-on-surface-variant">/ kg</span></p>
+                            <button
+                                class="bg-primary p-2.5 rounded-full text-on-primary hover:bg-primary-container transition-colors shadow-md">
+                                <span class="material-symbols-outlined text-sm">add_shopping_cart</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Newsletter / Trust Section -->
+        <section class="max-w-7xl mx-auto px-8 mt-24">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="absolute -top-12 -left-12 w-48 h-48 bg-tertiary/10 rounded-full blur-3xl"></div>
+                    <h2 class="text-4xl font-headline font-bold leading-tight mb-6">From our farm to your kitchen,
+                        without the middleman.</h2>
+                    <p class="text-on-surface-variant text-lg mb-8 leading-relaxed">Join 2,000+ families receiving the
+                        weekly harvest newsletter. We share farming insights, seasonal recipes, and special
+                        farmer-direct pricing.</p>
+                    <div class="flex gap-4">
+                        <input
+                            class="bg-surface-container-high border-none rounded-full px-6 py-4 w-full focus:ring-2 ring-primary"
+                            placeholder="Your email address" type="email" />
+                        <button
+                            class="bg-primary text-on-primary font-bold px-8 py-4 rounded-full whitespace-nowrap hover:bg-primary-container transition-all">Join
+                            The Harvest</button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-surface-container-low p-8 rounded-xl">
+                        <span class="material-symbols-outlined text-tertiary mb-4 text-3xl">psychology_alt</span>
+                        <h4 class="font-headline font-bold mb-2">Sustainable</h4>
+                        <p class="text-sm text-on-surface-variant">Practicing earth-first agriculture that respects the
+                            cycle of the seasons.</p>
+                    </div>
+                    <div class="bg-surface-container-low p-8 rounded-xl mt-8">
+                        <span class="material-symbols-outlined text-primary mb-4 text-3xl">handshake</span>
+                        <h4 class="font-headline font-bold mb-2">Fair Trade</h4>
+                        <p class="text-sm text-on-surface-variant">We ensure our partner farmers receive 30% more than
+                            market average.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#f3f4ef] w-full mt-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 max-w-7xl mx-auto">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <span class="font-manrope font-black text-[#49610a] text-3xl">GikanUma</span>
+                <p class="font-public-sans text-xs uppercase tracking-widest text-[#45483a]">© 2024 GikanUma Editorial
+                    Agriculture. The Digital Harvest.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8">
+                <a class="font-public-sans text-xs uppercase tracking-widest text-[#45483a] hover:underline decoration-[#49610a] underline-offset-4 opacity-80 hover:opacity-100"
+                    href="#">Terms of Service</a>
+                <a class="font-public-sans text-xs uppercase tracking-widest text-[#45483a] hover:underline decoration-[#49610a] underline-offset-4 opacity-80 hover:opacity-100"
+                    href="#">Privacy Policy</a>
+                <a class="font-public-sans text-xs uppercase tracking-widest text-[#45483a] hover:underline decoration-[#49610a] underline-offset-4 opacity-80 hover:opacity-100"
+                    href="#">Sustainability Report</a>
+                <a class="font-public-sans text-xs uppercase tracking-widest text-[#45483a] hover:underline decoration-[#49610a] underline-offset-4 opacity-80 hover:opacity-100"
+                    href="#">Farmer Login</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
