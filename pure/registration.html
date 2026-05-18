@@ -79,6 +79,89 @@
                 },
             },
         }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const signUpButton = document.querySelector('#signup-btn');
+
+            signUpButton.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                const nameInput = document.querySelector('#nameInput').value.trim();
+                const emailInput = document.querySelector('#emailInput').value.trim();
+                const phoneInput = document.querySelector('#phoneInput').value.trim();
+                const passwordInput = document.querySelector('#passwordInput').value;
+                const termsCheckbox = document.querySelector('#terms').checked;
+                const accountType = document.querySelector('input[name="account_type"]:checked').value;
+
+                if (!nameInput || !emailInput || !phoneInput || !passwordInput) {
+                    alert('Please fill out all fields.');
+                    return;
+                }
+
+                if (!termsCheckbox) {
+                    alert('You must agree to the Terms of Service and Privacy Policy.');
+                    return;
+                }
+
+                const nameParts = nameInput.split(' ');
+                const firstName = nameParts[0] || '';
+                const lastName = nameParts.slice(1).join(' ') || '';
+
+                const generatedId = 'usr_' + Math.random().toString(16).substring(2, 14);
+                const currentTimestamp = new Date().toISOString();
+
+                const newUserSchema = {
+                    id: generatedId,
+                    account_status: "active",
+                    created_at: currentTimestamp,
+                    updated_at: currentTimestamp,
+                    auth: {
+                        email: emailInput,
+                        username: emailInput.split('@')[0],
+                        email_verified: false,
+                        roles: [accountType]
+                    },
+                    profile: {
+                        first_name: firstName,
+                        last_name: lastName,
+                        avatar_url: `https://cdn.example.com/avatars/${generatedId}.jpg`,
+                        phone_number: phoneInput,
+                        dob: "",
+                        password: passwordInput
+                    },
+                    preferences: {
+                        theme: "light",
+                        language: "en-US",
+                        notifications: {
+                            email: true,
+                            push: true,
+                            marketing: false
+                        }
+                    },
+                    billing: {
+                        subscription_tier: "free",
+                        payment_method_saved: false,
+                        currency: "USD"
+                    },
+                    security: {
+                        two_factor_enabled: false,
+                        last_login_at: currentTimestamp,
+                        last_login_ip: "127.0.0.1"
+                    }
+                };
+
+                console.log("Structured User JSON Object Created:", newUserSchema);
+
+                let localUsersData = JSON.parse(localStorage.getItem('mockUsersDB')) || { users: [] };
+
+                localUsersData.users.push(newUserSchema);
+
+                localStorage.setItem('mockUsersDB', JSON.stringify(localUsersData));
+
+                alert('Account cultivated successfully! Redirecting to login page...');
+                window.location.href = "./login.html";
+            });
+        });
     </script>
     <style>
         .material-symbols-outlined {
@@ -97,7 +180,39 @@
 </head>
 
 <body class="bg-background font-body text-on-surface antialiased min-h-screen flex flex-col">
-    <main class="flex-grow flex flex-col md:flex-row h-screen overflow-hidden">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-[#f9faf5]/80 dark:bg-[#1a1c19]/80 backdrop-blur-md shadow-sm shadow-[#1a1c19]/5">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-2xl font-bold tracking-tighter text-[#49610a] dark:text-[#d1e892] brand-font">
+                GikanUma
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="font-headline text-sm tracking-tight text-[#45483a] font-medium hover:text-[#617a24] transition-colors duration-300 py-1"
+                    href="./home.html">Home</a>
+                <a class="font-headline text-sm tracking-tight text-[#45483a] font-medium hover:text-[#617a24] transition-colors duration-300 py-1"
+                    href="./about.html">About Us</a>
+                <a class="font-headline text-sm tracking-tight text-[#45483a] font-medium hover:text-[#617a24] transition-colors duration-300 py-1"
+                    href="./support.html">Support</a>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="hidden lg:flex items-center bg-surface-container-high px-4 py-1.5 rounded-full">
+                    <span class="material-symbols-outlined text-on-surface-variant text-lg">search</span>
+                    <input class="bg-transparent border-none focus:ring-0 text-sm font-body w-48"
+                        placeholder="Search topics..." type="text" />
+                </div>
+                <div class="flex items-center gap-4 text-[#49610a] dark:text-[#d1e892]">
+                    <span
+                        class="material-symbols-outlined cursor-pointer scale-95 active:scale-90 transition-transform"><a
+                            href="./cart.html">shopping_cart</a></span>
+                    <span
+                        class="material-symbols-outlined cursor-pointer scale-95 active:scale-90 transition-transform"><a
+                            href="./account.html">account_circle</a></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="mt-16 flex-grow flex flex-col md:flex-row h-screen overflow-hidden">
         <section class="hidden md:flex md:w-5/12 lg:w-1/2 relative overflow-hidden bg-primary-container">
             <img alt="Sun-drenched fertile farmland"
                 class="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-80"
@@ -171,9 +286,9 @@
                                 class="block text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-2 px-1">Full
                                 Name</label>
                             <div class="relative">
-                                <input
+                                <input id="nameInput"
                                     class="w-full bg-surface-container-high border-none rounded-lg px-4 py-3 text-on-surface placeholder:text-outline focus:ring-0 transition-all"
-                                    placeholder="Johnathan Appleseed" type="text" />
+                                    placeholder="Dear Evan Hansennnnn" type="text" />
                                 <div
                                     class="absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-300 group-focus-within:w-full">
                                 </div>
@@ -184,9 +299,9 @@
                                 class="block text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-2 px-1">Email
                                 Address</label>
                             <div class="relative">
-                                <input
+                                <input id="emailInput"
                                     class="w-full bg-surface-container-high border-none rounded-lg px-4 py-3 text-on-surface placeholder:text-outline focus:ring-0 transition-all"
-                                    placeholder="harvest@gikanuma.com" type="email" />
+                                    placeholder="thadeossandoval@gmail.com" type="email" />
                                 <div
                                     class="absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-300 group-focus-within:w-full">
                                 </div>
@@ -197,9 +312,9 @@
                                 class="block text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-2 px-1">Phone
                                 Number</label>
                             <div class="relative">
-                                <input
+                                <input id="phoneInput"
                                     class="w-full bg-surface-container-high border-none rounded-lg px-4 py-3 text-on-surface placeholder:text-outline focus:ring-0 transition-all"
-                                    placeholder="+1 (555) 000-0000" type="tel" />
+                                    placeholder="+63 XXX-XXX-XXXX" type="tel" />
                                 <div
                                     class="absolute bottom-0 left-0 h-0.5 w-0 bg-primary transition-all duration-300 group-focus-within:w-full">
                                 </div>
@@ -209,7 +324,7 @@
                             <label
                                 class="block text-xs font-semibold uppercase tracking-widest text-on-surface-variant mb-2 px-1">Password</label>
                             <div class="relative">
-                                <input
+                                <input id="passwordInput"
                                     class="w-full bg-surface-container-high border-none rounded-lg px-4 py-3 text-on-surface placeholder:text-outline focus:ring-0 transition-all"
                                     placeholder="••••••••" type="password" />
                                 <div
@@ -227,13 +342,14 @@
                                 href="#">Privacy Policy</a> regarding my data harvest.
                         </label>
                     </div>
-                    <button
+                    <button id="signup-btn"
                         class="w-full bg-primary text-on-primary py-4 rounded-full font-headline font-bold text-sm tracking-widest uppercase hover:bg-primary-container transition-all hover:-translate-y-1 active:scale-95 editorial-shadow"
                         type="button">
                         Cultivate Account
                     </button>
                     <p class="text-center text-sm text-on-surface-variant mt-8">
-                        Already part of the harvest? <a class="text-primary font-bold hover:underline" href="#">Sign
+                        Already part of the harvest? <a class="text-primary font-bold hover:underline"
+                            href="./login.html">Sign
                             In</a>
                     </p>
                 </form>

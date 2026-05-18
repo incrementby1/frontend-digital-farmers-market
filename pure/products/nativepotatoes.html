@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Native Potatoes | GikanUma</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Public+Sans:wght@100..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#edeee9",
+                        "primary": "#49610a",
+                        "tertiary-fixed-dim": "#f3be55",
+                        "primary-fixed-dim": "#b4d171",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1a1c19",
+                        "inverse-on-surface": "#f0f1ec",
+                        "secondary": "#75584d",
+                        "surface": "#f9faf5",
+                        "on-secondary-fixed": "#2b160f",
+                        "background": "#f9faf5",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c5c8b6",
+                        "outline": "#757969",
+                        "surface-variant": "#e2e3de",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#4f6610",
+                        "secondary-fixed-dim": "#e4beb2",
+                        "on-primary-container": "#edffbd",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#261900",
+                        "secondary-fixed": "#ffdbce",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e2e3de",
+                        "surface-container-low": "#f3f4ef",
+                        "on-tertiary-container": "#fff5eb",
+                        "on-secondary-fixed-variant": "#5b4137",
+                        "inverse-primary": "#b4d171",
+                        "tertiary-container": "#936a00",
+                        "tertiary": "#745300",
+                        "primary-fixed": "#d0ee8a",
+                        "tertiary-fixed": "#ffdea5",
+                        "on-primary-fixed-variant": "#394d00",
+                        "on-surface-variant": "#45483a",
+                        "secondary-container": "#fed7ca",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9faf5",
+                        "inverse-surface": "#2e312e",
+                        "on-tertiary-fixed-variant": "#5d4200",
+                        "surface-container-high": "#e7e9e4",
+                        "on-primary-fixed": "#151f00",
+                        "on-secondary-container": "#795c51",
+                        "primary-container": "#617a24",
+                        "on-background": "#1a1c19",
+                        "surface-dim": "#d9dad6"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Public Sans"],
+                        "label": ["Public Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        body {
+            font-family: 'Public Sans', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-headline {
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background text-on-surface">
+    <!-- TopNavBar -->
+    <nav
+        class="fixed top-0 w-full z-50 bg-[#f9faf5]/80 dark:bg-[#1a1c19]/80 backdrop-blur-md shadow-sm shadow-[#1a1c19]/5">
+        <div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+            <div class="text-2xl font-bold tracking-tighter text-[#49610a] dark:text-[#d1e892] brand-font">
+                GikanUma
+            </div>
+            <div class="hidden md:flex items-center gap-8">
+                <a class="font-headline text-sm tracking-tight text-[#45483a] font-medium hover:text-[#617a24] transition-colors duration-300 py-1"
+                    href="../home.html">Home</a>
+                <a class="font-headline text-sm tracking-tight text-[#45483a] font-medium hover:text-[#617a24] transition-colors duration-300 py-1"
+                    href="../about.html">About Us</a>
+                <a class="font-headline text-sm tracking-tight text-[#45483a] font-medium hover:text-[#617a24] transition-colors duration-300 py-1"
+                    href="../support.html">Support</a>
+            </div>
+            <div class="flex items-center gap-6">
+                <div class="hidden lg:flex items-center bg-surface-container-high px-4 py-1.5 rounded-full">
+                    <span class="material-symbols-outlined text-on-surface-variant text-lg">search</span>
+                    <input class="bg-transparent border-none focus:ring-0 text-sm font-body w-48"
+                        placeholder="Search topics..." type="text" />
+                </div>
+                <div class="flex items-center gap-4 text-[#49610a] dark:text-[#d1e892]">
+                    <span
+                        class="material-symbols-outlined cursor-pointer scale-95 active:scale-90 transition-transform"><a
+                            href="./cart.html">shopping_cart</a></span>
+                    <span
+                        class="material-symbols-outlined cursor-pointer scale-95 active:scale-90 transition-transform"><a
+                            href="./account.html">account_circle</a></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-24 pb-16 px-6 max-w-7xl mx-auto">
+        <!-- Editorial Product Display -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            <!-- Left Column: Asymmetric Image Gallery -->
+            <div class="lg:col-span-7 grid grid-cols-6 gap-4">
+                <div class="col-span-6 rounded-xl overflow-hidden shadow-sm bg-surface-container-low aspect-[4/3]">
+                    <img alt="Fresh Organic Garlic" class="w-full h-full object-cover"
+                        data-alt="Close-up of several whole bulbs of organic garlic with papery white skins and purple tints on a rustic wooden table with soft morning light."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmdVsr4nx24W-4uGCPFqe9c_DtPyEoRqGaiRrjGWdWDqP-QLyWoidqpA84xPCeiLb1Uuqf-kUilnBr-GTNt6wnNtHVDEgC9gjYsbH3neSnUXhG4jSkBNBZ4Q2qju8bl-0lUTKOXtmOQvAxCmlWDHBlv3aGyoPlE4Q4MlIY6yXWX1QKHRZJFClgIhJWrOmn5DX819ghZKHyxB9aUGl4LcZA602XKMkEfPbqCE7uj0fIqQsnrshPEkFwKZHgLaOQaWVq2ShQerZsBVTE" />
+                </div>
+                <div class="col-span-3 rounded-xl overflow-hidden bg-surface-container-low aspect-square">
+                    <img alt="Peeled Garlic Cloves" class="w-full h-full object-cover"
+                        data-alt="Detailed shot of individual peeled garlic cloves showing smooth texture and pale cream color arranged on a natural stone surface."
+                        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fas1.ftcdn.net%2Fjpg%2F14%2F15%2F14%2F98%2F1000_F_1415149830_Mi9A2Tx1RPln1IErbOcSVn15RM9uOp9U.jpg&f=1&nofb=1&ipt=a184cbada85d670a03f84e9cf6fb6a03f0d1224ce3c90d23c6e33aea616288df" />
+                </div>
+                <div class="col-span-3 rounded-xl overflow-hidden bg-surface-container-low aspect-square">
+                    <img alt="Garlic in the Field" class="w-full h-full object-cover"
+                        data-alt="Earthy scene showing fresh garlic bulbs with dirt on roots laying in a lush green field under warm agricultural lighting."
+                        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fz%2Fpotato-food-root-vegetable-pile-freshly-harvested-aaloo-starchy-tuber-plant-solanum-tuberosum-organic-potatoes-alu-patate-265431300.jpg&f=1&nofb=1&ipt=91ddd5f03bf055a5ed88897fa3a87c35fb3031035336855ff1bd99af35f32fd0" />
+                </div>
+            </div>
+            <!-- Right Column: Product Narrative -->
+            <div class="lg:col-span-5 flex flex-col gap-8">
+                <div>
+                    <nav class="flex mb-4 text-xs font-label uppercase tracking-widest text-on-surface-variant/60">
+                        <span>Produce</span>
+                        <span class="mx-2">/</span>
+                        <span>Tubers</span>
+                    </nav>
+                    <h1 class="text-5xl font-extrabold tracking-tighter text-on-surface leading-tight mb-2">
+                        Native Potatoes
+                    </h1>
+                    <p class="text-on-surface-variant font-body italic text-lg">Harvested by the Cordillera Highlands
+                        Collective</p>
+                </div>
+                <div class="bg-surface-container-low rounded-xl p-6 flex flex-col gap-6">
+                    <div class="flex justify-between items-end">
+                        <div class="flex flex-col">
+                            <span class="text-sm font-label uppercase tracking-widest text-on-surface-variant">Price per
+                                250g</span>
+                            <span class="text-3xl font-bold text-primary">$4.50</span>
+                        </div>
+                        <div class="text-right">
+                            <span
+                                class="text-sm font-label uppercase tracking-widest text-on-surface-variant">Availability</span>
+                            <span class="block text-tertiary font-bold">In Seasonal Harvest</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-3">
+                        <button
+                            class="w-full bg-primary text-on-primary py-4 rounded-full font-bold text-lg hover:bg-primary-container transition-all shadow-md active:scale-[0.98]">
+                            Add to Cart
+                        </button>
+                        <button
+                            class="w-full bg-secondary-container text-on-secondary-container py-4 rounded-full font-bold text-lg hover:opacity-90 transition-all active:scale-[0.98]">
+                            Buy Now
+                        </button>
+                    </div>
+                </div>
+                <!-- Product Details Bento -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-surface-container rounded-xl p-5 flex flex-col gap-2">
+                        <span class="material-symbols-outlined text-tertiary" data-icon="eco">eco</span>
+                        <h3 class="font-headline font-bold text-sm">Organic Certified</h3>
+                        <p class="text-xs text-on-surface-variant">Grown without synthetic pesticides or fertilizers in
+                            nutrient-rich volcanic soil.</p>
+                    </div>
+                    <div class="bg-surface-container rounded-xl p-5 flex flex-col gap-2">
+                        <span class="material-symbols-outlined text-primary"
+                            data-icon="local_shipping">local_shipping</span>
+                        <h3 class="font-headline font-bold text-sm">Farm to Door</h3>
+                        <p class="text-xs text-on-surface-variant">Typically delivered within 48 hours of harvest to
+                            preserve pungent oils.</p>
+                    </div>
+                </div>
+                <!-- Description & Nutrition -->
+                <div class="space-y-6">
+                    <div class="border-t border-outline-variant/20 pt-6">
+                        <h2 class="text-xl font-bold font-headline mb-3 text-on-surface">The Editorial Note</h2>
+                        <p class="text-on-surface-variant leading-relaxed font-body">
+                            Cultivated in nutrient-packed highlands soil, our native potatoes feature a naturally
+                            buttery taste and a delightfully fluffy texture when cooked. These versatile tubers are
+                            ideal for mashing smoothly, roasting to a golden crisp with fresh herbs, or thickening your
+                            favorite traditional stews.
+                        </p>
+                    </div>
+                    <div class="bg-surface-container-high rounded-xl p-6">
+                        <h2 class="text-sm font-label uppercase tracking-widest mb-4 text-on-surface-variant">
+                            Nutritional Info (per 100g)</h2>
+                        <div class="grid grid-cols-2 gap-y-4 gap-x-8 text-sm">
+                            <div class="flex justify-between border-b border-outline-variant/30 pb-1">
+                                <span class="text-on-surface-variant">Calories</span>
+                                <span class="font-bold">77 kcal</span>
+                            </div>
+                            <div class="flex justify-between border-b border-outline-variant/30 pb-1">
+                                <span class="text-on-surface-variant">Protein</span>
+                                <span class="font-bold">2.0 g</span>
+                            </div>
+                            <div class="flex justify-between border-b border-outline-variant/30 pb-1">
+                                <span class="text-on-surface-variant">Carbs</span>
+                                <span class="font-bold">17.5 g</span>
+                            </div>
+                            <div class="flex justify-between border-b border-outline-variant/30 pb-1">
+                                <span class="text-on-surface-variant">Vitamin B6</span>
+                                <span class="font-bold">15% DV</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- The Harvest Slider (Related Products) -->
+        <section class="mt-24">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <span class="text-xs font-label uppercase tracking-widest text-tertiary font-bold">You Might Also
+                        Like</span>
+                    <h2 class="text-4xl font-black font-headline tracking-tighter text-on-surface">Related Harvests</h2>
+                </div>
+                <div class="flex gap-2">
+                    <button
+                        class="w-10 h-10 rounded-full bg-surface-container border border-outline-variant/20 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-highest transition-colors">
+                        <span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+                    </button>
+                    <button
+                        class="w-10 h-10 rounded-full bg-surface-container border border-outline-variant/20 flex items-center justify-center text-on-surface-variant hover:bg-surface-container-highest transition-colors">
+                        <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+            <div class="flex gap-6 overflow-x-auto pb-8 snap-x no-scrollbar">
+                <!-- Related Card 1 -->
+                <div class="min-w-[280px] group snap-start">
+                    <div class="aspect-square rounded-xl overflow-hidden bg-surface-container mb-4">
+                        <img alt="Shallots"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Small reddish-purple organic shallots piled on a dark surface, captured with sharp focus and cinematic shadows."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCK4D2mjIt-IOJqN4GcT7v4Zq4u7IFZAymb-Nf7J4cRuiIi2Fvxop6VtP3ik7jAwjEJNFeQoovrpi_MmaMMd-tSFFx2ehq_uib3nRjy6kBJgvOX9LiNwEkOo2CChiGWD2Z4yyMzHwxtAriBP6nJJrcSE7212wera7exC73fGzJOUX32cWIo61OCndaFFUx1TsgZ9F7Y4RhRBtH6vWwL65IX4CY5nSERdFGAtswAmhc7nBOY1nd4b5-mS-DgPz0tKUhjfRsghsY0GEZ1" />
+                    </div>
+                    <div class="px-2">
+                        <h3 class="font-headline font-bold text-lg text-on-surface">Red Mountain Shallots</h3>
+                        <p class="text-primary font-bold mt-1">$3.25 / 200g</p>
+                    </div>
+                </div>
+                <!-- Related Card 2 -->
+                <div class="min-w-[280px] group snap-start">
+                    <div class="aspect-square rounded-xl bg-surface-container -mb-6">
+                        <img alt="Ginger"
+                            class="w-full max-h-full overflow-hidden object-cover transition-transform duration-500"
+                            data-alt="Gnarled fresh ginger root with smooth skin and light soil traces, bright high-key lighting emphasizing its organic form."
+                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Forganicmandya.com%2Fcdn%2Fshop%2Ffiles%2FGinger.jpg%3Fv%3D1721374786%26width%3D1000&f=1&nofb=1&ipt=5c7270e5dd8a8b647d125bf260fde7557ce4be5050cfdf1c7d931195e624ad2d" />
+                    </div>
+                    <div class="px-2">
+                        <h3 class="font-headline font-bold text-lg text-on-surface">Organic Young Ginger</h3>
+                        <p class="text-primary font-bold mt-1">$5.00 / 300g</p>
+                    </div>
+                </div>
+                <!-- Related Card 3 -->
+                <div class="min-w-[280px] group snap-start">
+                    <div class="aspect-square rounded-xl overflow-hidden bg-surface-container mb-4">
+                        <img alt="Red Onions"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="Large deep purple red onions with papery skins, backlit to show texture and vibrant color."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3lmI_o2JSngRCTd_GkON6_6J8Yzta4c-NSxyxS3EmNOFdGjs_k-kD8Hw4XdA-y4kX79bAy33opbR_4Htp96_9VEQ6UPD2j1Flr21D3Lgy1-Y523goW_dzLaYCdasM8MwFwJ_-YFUk4bdx6ZIDevCZB-HnOheqc9qEM4Rcvk4-HPYQhMbu_TuD-GYkl3-AQ_YVKJkNAroAMbVSpDGAkOYAA8BPwY3_TuWetwNyO0DTTMLgp2G7zU0x8cwkatZMPNQg_8yKxqh1dhXc" />
+                    </div>
+                    <div class="px-2">
+                        <h3 class="font-headline font-bold text-lg text-on-surface">Heritage Red Onions</h3>
+                        <p class="text-primary font-bold mt-1">$2.75 / kg</p>
+                    </div>
+                </div>
+                <!-- Related Card 4 -->
+                <div class="min-w-[280px] group snap-start">
+                    <div class="aspect-square rounded-xl overflow-hidden bg-surface-container mb-4">
+                        <img alt="Peppers"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            data-alt="A variety of colorful chili peppers, from deep green to bright red, in an artistic bowl with moody lighting."
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-MauGF-uwOqpUXYKJIhXEQOtrAg2-w99n54ddHygJzsfhgDxFMExaX7Sd_tKOk-MNRZq0ktW43IxqehCHzokVBfFsra58i6O0_jM6l0nj-rHRO9KDgzTpPjgblpBs_Ngfl5cHMpWNqsLPAK9o_621_eG98TFpiOdSinjPMfI4nTFCV8dMVS81BaUxNmYBn7-_j8LxkXv53tv0aK4vLKIdYTixT53l192-bnr8op_EHM-pJTwqKr0jbufzmKCaR_bOBJCe-qrz7xis" />
+                    </div>
+                    <div class="px-2">
+                        <h3 class="font-headline font-bold text-lg text-on-surface">Wild Bird's Eye Chilies</h3>
+                        <p class="text-primary font-bold mt-1">$1.50 / 50g</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full mt-auto bg-[#f3f4ef] dark:bg-[#1a1c19]">
+        <div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 max-w-7xl mx-auto">
+            <div class="flex flex-col gap-2">
+                <span class="font-manrope font-black text-[#49610a] text-2xl">GikanUma</span>
+                <p class="font-public-sans text-xs uppercase tracking-widest text-[#45483a]">© 2024 GikanUma Editorial
+                    Agriculture. The Digital Harvest.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a class="font-public-sans text-xs uppercase tracking-widest text-[#45483a] hover:underline decoration-[#49610a] underline-offset-4 opacity-80 hover:opacity-100"
+                    href="#">Terms of Service</a>
+                <a class="font-public-sans text-xs uppercase tracking-widest text-[#45483a] hover:underline decoration-[#49610a] underline-offset-4 opacity-80 hover:opacity-100"
+                    href="#">Privacy Policy</a>
+                <a class="font-public-sans text-xs uppercase tracking-widest text-[#45483a] hover:underline decoration-[#49610a] underline-offset-4 opacity-80 hover:opacity-100"
+                    href="#">Sustainability Report</a>
+                <a class="font-public-sans text-xs uppercase tracking-widest text-[#45483a] hover:underline decoration-[#49610a] underline-offset-4 opacity-80 hover:opacity-100"
+                    href="#">Farmer Login</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

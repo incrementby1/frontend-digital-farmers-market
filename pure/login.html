@@ -85,6 +85,55 @@
                 }
             }
         }
+
+        // Get JSON
+        let globalUsersList = [];
+
+        async function loadUsers() {
+            try {
+                const response = await fetch('./data/users.json');
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const data = await response.json();
+                globalUsersList = data.users;
+                console.log("Users loaded successfully:", globalUsersList);
+
+            } catch (error) {
+                console.error('Error reading JSON:', error);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            loadUsers();
+
+            const signInButton = document.querySelector('#signin-btn');
+            const emailInput = document.querySelector('#email');
+            const passwordInput = document.querySelector('#password');
+
+            signInButton.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                const typedEmail = emailInput.value.trim();
+                const typedPassword = passwordInput.value;
+
+                const matchedUser = globalUsersList.find(user =>
+                    user.auth.email === typedEmail && user.profile.password === typedPassword
+                );
+
+                if (matchedUser) {
+                    console.log("Success! Welcome back, " + matchedUser.profile.first_name);
+                    localStorage.setItem('loggedInUser', JSON.stringify(matchedUser));
+                    window.location.href = "./home.html";
+                } else {
+                    console.log("Login failed: Invalid email or password.");
+                    alert("Invalid email or password. Please try again!");
+                }
+            });
+        });
     </script>
     <style>
         .material-symbols-outlined {
@@ -198,7 +247,7 @@
                         <a class="text-tertiary font-semibold hover:underline underline-offset-4" href="#">Forgot
                             Password?</a>
                     </div>
-                    <button
+                    <button id="signin-btn"
                         class="w-full bg-primary text-on-primary font-headline font-bold py-5 rounded-full transition-all duration-300 hover:bg-primary-container hover:shadow-lg hover:-translate-y-1 active:scale-95"
                         type="submit">
                         Sign In to the Harvest
